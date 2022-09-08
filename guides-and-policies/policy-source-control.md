@@ -57,19 +57,19 @@ At Arcadia Science, repositories should follow basic guidelines.
 
 - For publicly available data, scripts used to download and process these data should be preserved, as should the versions of items used in processing (e.g. probe to gene mappings). This code should be version controlled. Where possible, intermediate files of reasonable size can be stored to facilitate re-use, but the process to regenerate these files from publicly available data should be preserved.
   - Reasonable size is 100MB for storing files on Github.
-- When we generate data, they should be stored in a location where they are replicated and uploaded to the relevant database as soon as possible (e.g. raw sequencing data uploaded to the Sequence Read Archive). If possible, the code should be updated to match the above. For more on this, please see the relevant publishing documentation [here](https://docs.google.com/document/d/1oV-bIJXQlQz819nax5EucXWlAOVMFrxTTilWq3jKFs0/edit).
+- When we generate data, they should be stored in a location where they are replicated and uploaded to the relevant database as soon as possible (e.g. raw sequencing data uploaded to the Sequence Read Archive). If possible, the code should be updated to match the above. For more on this, please see the relevant publishing documentation [here](https://www.notion.so/arcadiascience/Sharing-Data-eca60da150f04a7a905a8540871f0364).
 
 ### Review templates
 
 - For each change, it’s easy to provide a default template for the developer to fill when creating the pull request.
 - For this, create a file called `PULL_REQUEST_TEMPLATE.md` under the `.github` directory of your project.
-- Example pull request template file can be found [here](.github/PULL_REQUEST_TEMPLATE.md).
+- Example pull request template file can be found [here](../.github/PULL_REQUEST_TEMPLATE.md).
 
 ### [Optional] Code owners
 
 - For projects with a lot of coordination between team members, it may make sense to define individuals or teams that are responsible for sections of code in a repository. This would make it easier to seek the appropriate code review before merging a pull request.
 - You can accomplish this by using the [Code Owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) feature of Github by creating a `CODEOWNERS` file under the `.github` directory of your project.
-- Example codeowners template file can be found [here](.github/CODEOWNERS).
+- Example codeowners template file can be found [here](../.github/CODEOWNERS).
 
 ### [Optional] Reviewing Jupyter notebooks using the ReviewNB tool
 
@@ -88,7 +88,7 @@ It’s entirely possible to get stuck in a squiggly quagmire of git branches and
 
 - **Adding too many files or the wrong files into a commit.** Git has two strategies to help you avoid adding the wrong files into your repository. First, there is a file, `.gitignore`, in which you can specify file names or paths (including with regex!) that should always be ignored by git. It might make sense to add things like `*.fastq.gz` to this file to avoid adding large sequencing files to GitHub. Second, instead of doing something like `git add` , it’s generally good practice to type out the names of the files you want to add explicitly (`git add 01-analyze-seq-data.ipynb`) so you don’t accidentally add something unintended. If you do add something you didn’t mean to, you can always remove it later!
 - **Starting from the wrong branch.** A branch can start from the `main` branch of a GitHub repo, or any other branch that already exists. Before you start a new branch, check that you’re on the branch you want to start from with `git branch`. If you’re not, use `git checkout <branch name>`to get to the branch you want to start with before creating a new one.
-  - You can also customize your terminal of choice to show the current branch name by following the instructions [here](https://www.notion.so/Elizabeth-Mert-Taylor-Weekly-Sync-ef95027a172b45dbbea4597c03e938aa).
+  - You can also customize your terminal of choice to show the current branch name by following the instructions [here](https://askubuntu.com/questions/730754/how-do-i-show-the-git-branch-with-colours-in-bash-prompt).
 - **Merge conflicts.** When two pull requests touch the same line of code in different ways, this usually creates a merge conflict. If you’re working on a project mostly alone, you can avoid merge conflicts by only working on one section of code per branch. If this isn’t possible, or if you’re working with multiple people, have no fear! GitHub can walk you through resolving the merge conflict by having you select the lines of code you wish to keep.
 
 ## Tutorials
