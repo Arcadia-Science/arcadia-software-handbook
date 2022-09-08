@@ -23,7 +23,8 @@ At Arcadia Science, repositories should follow basic guidelines.
 - **Naming repositories:** Repository names are hyphenated. Example: [Arcadia-Science/arcadia-twitter-collections](https://github.com/Arcadia-Science/arcadia-twitter-collections).
 - **Default repository settings**: Each repository should have the following settings (we’re working on making this a default template, but in the mean time please try and check this set of boxes when you create a new repo):
 
-  ![Screen Shot 2022-08-08 at 9.15.30 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e4b8f4a3-b319-49aa-ada1-b2da7c90746e/Screen_Shot_2022-08-08_at_9.15.30_PM.png)
+<img width="768" alt="Default repository settings" src="https://user-images.githubusercontent.com/2692053/189210914-32052663-e2d3-4ab6-a418-1d1aca6a9afd.png">
+
 
 - **README**: Repositories should contain a descriptive README document.
 - **Branches**: At Arcadia Science, we work on repositories using branches and not forks. Forks are error-prone and can go out-of-sync in the case of renamings etc.
