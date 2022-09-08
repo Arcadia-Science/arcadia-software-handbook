@@ -4,14 +4,14 @@
 
 ## Git
 
-- Git is a free and open source distributed version control system.
+- [Git](https://git-scm.com/) is a free and open source distributed version control system.
 - Version control is the practice of tracking and managing changes to software code. This means we can easily see who made what change when and potentially revert to earlier version of the code.
 - Since version control tools like Git work across platforms, it also makes access to code repositories easy and consistent across environments.
 - In the end, version control is an essential tool of collaboration for large teams to build complex software.
 
 ## GitHub
 
-- GitHub is built on top of Git and is our primary version control service. We have an [Arcadia Science account there](https://github.com/Arcadia-Science). We expect that team members will maintain their code in repositories under this team account.
+- [GitHub](https://github.com/) is built on top of Git and is our primary version control service. We have an [Arcadia Science account](https://github.com/Arcadia-Science) and we expect that team members will maintain their code in repositories under this team account.
 - On GitHub, the default branch for a repository is called `main`. We should not deviate from this convention, unless there’s a good reason to do so.
 - When working on GitHub repositories, Arcadia Science team members should not commit changes directly to the `main` branch. Instead commits happen as described below to facilitate code review.
 
