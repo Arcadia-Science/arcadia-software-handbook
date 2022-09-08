@@ -63,14 +63,13 @@ At Arcadia Science, repositories should follow basic guidelines.
 
 - For each change, it’s easy to provide a default template for the developer to fill when creating the pull request.
 - For this, create a file called `PULL_REQUEST_TEMPLATE.md` under the `.github` directory of your project.
-- Example template file:
-
-  [PULL_REQUEST_TEMPLATE.md](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dc1f3169-a4e6-4e9c-a54e-3f308a6dc872/PULL_REQUEST_TEMPLATE.md)
+- Example pull request template file can be found [here](.github/PULL_REQUEST_TEMPLATE.md).
 
 ### [Optional] Code owners
 
 - For projects with a lot of coordination between team members, it may make sense to define individuals or teams that are responsible for sections of code in a repository. This would make it easier to seek the appropriate code review before merging a pull request.
 - You can accomplish this by using the [Code Owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) feature of Github by creating a `CODEOWNERS` file under the `.github` directory of your project.
+- Example codeowners template file can be found [here](.github/CODEOWNERS).
 
 ### [Optional] Reviewing Jupyter notebooks using the ReviewNB tool
 
