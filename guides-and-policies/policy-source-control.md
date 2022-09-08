@@ -29,11 +29,12 @@ At Arcadia Science, repositories should follow basic guidelines.
 - **Branches**: At Arcadia Science, we work on repositories using branches and not forks. Forks are error-prone and can go out-of-sync in the case of renamings etc.
   - The default branch name is `main.`
 - **Working in branches**
-  - For each code change, create a new branch.
+  - For each code change, feature or a fix, create a new branch. The branch names should be all lowercase and should follow this naming convention: `<your initials>/<brief description of the code change>`. Example: `fmc/policy-source-control`.
   - Make your change and push it to the branch.
   - Create a pull request into the repository owned by Arcadia Science. If your pull request is not ready for review, but you’d like to still open one, you can open a draft pull request.
   - Name potential reviewers for your pull request.
-  - Once at least one Arcadian has approved your pull request, you or a reviewer may merge your pull request.
+  - Once at least one Arcadian has approved your pull request, you may merge your pull request.
+  - Once your pull request is merged, please delete your branch to keep the Github branches/tags clean and tidy.
 - **Archiving repositories:** As much as possible, you should refrain from deleting repositories so other members (past and future) of Arcadia can see what worked and what hasn’t. If a repository is no longer useful, instead of deleting you can make it read-only by following the instructions [here](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories).
 - **Openness**: By default, repositories should be public from creation. If you do work in a private repository, assume that it will one day become public. The exception to this rule may be IP-protected work Arcadia does. In this case, please consult our legal counsel.
 - **Licensing:** TBD
