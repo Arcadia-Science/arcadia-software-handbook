@@ -25,7 +25,6 @@ At Arcadia Science, repositories should follow basic guidelines.
 
 <img width="768" alt="Default repository settings" src="https://user-images.githubusercontent.com/2692053/189210914-32052663-e2d3-4ab6-a418-1d1aca6a9afd.png">
 
-
 - **README**: Repositories should contain a descriptive README document.
 - **Branches**: At Arcadia Science, we work on repositories using branches and not forks. Forks are error-prone and can go out-of-sync in the case of renamings etc.
   - The default branch name is `main.`
@@ -51,7 +50,7 @@ At Arcadia Science, repositories should follow basic guidelines.
 ### What not to keep under version control
 
 - You should never commit any private information to your repository. No exceptions!
-- This could include sensitive business materials or information, credentials of any sort (personal or company-wide). If you mistakenly commit any sort of credential or other sensitive information to a Github repository, there may be ways to reverse the commit or rewrite the git history. So please ping @Feridun Mert Celebi for help.
+- This could include sensitive business materials or information, credentials of any sort (personal or company-wide). If you mistakenly commit any sort of credential or other sensitive information to a Github repository, there may be ways to reverse the commit or rewrite the git history. So please ping [@Feridun Mert Celebi](https://github.com/mertcelebi) for help.
   - It’s safe to assume that you’ll have to revoke and regenerate your committed credentials to make sure those can’t be used by others.
 
 ### Data management
