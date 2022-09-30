@@ -2,6 +2,16 @@
 
 - This standard describes core software engineering standards at Arcadia Science, as it pertains to version control and data management.
 
+## TLDR
+
+- [Arcadia Science](https://www.arcadiascience.com/) uses [Git](https://git-scm.com/) and [GitHub](https://github.com/) for version control.
+- Repositories on Github should be created as private and in the Arcadia-Science organization until you have further IP guidance.
+- Each repository should have an open license and a descriptive README.
+- Code and documentation are added throughout a project, not at the time of publication.
+- Work is done in branches and integrated into the main branch through pull requests.
+- Pull requests are reviewed by at least one other Arcadian and merged by the creator of the pull request upon approval.
+- Code associated with a pub is tagged in a release and archived on [Zenodo](https://zenodo.org/).
+
 ## Git
 
 - [Git](https://git-scm.com/) is a free and open source distributed version control system.
@@ -37,7 +47,7 @@ At Arcadia Science, repositories should follow basic guidelines.
   - Once at least one Arcadian has approved your pull request, you may merge your pull request.
   - Once your pull request is merged, please delete your branch to keep the Github branches/tags clean and tidy.
 - **Archiving repositories:** As much as possible, you should refrain from deleting repositories so other members (past and future) of Arcadia can see what worked and what hasn’t. If a repository is no longer useful, instead of deleting you can make it read-only by following the instructions [here](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories).
-- **Openness**: By default, repositories should be public from creation. If you do work in a private repository, assume that it will one day become public. The exception to this rule may be IP-protected work Arcadia does. In this case, please consult our legal counsel.
+- **Openness**: By default, repositories should be private from creation, unless you have IP clearance from our legal counsel. If you do work in a private repository, assume that it will one day become public. The exception to this rule may be IP-protected work Arcadia does. In this case, please consult our legal counsel.
 - **Licensing:** TBD
 
 ### Pull Requests & Code reviews
