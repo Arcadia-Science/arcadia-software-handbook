@@ -1,6 +1,6 @@
 # Source control
 
-- This policy describes core software engineering policies at Arcadia Science, as it pertains to version control and data management.
+- This standard describes core software engineering standards at Arcadia Science, as it pertains to version control and data management.
 
 ## Git
 
@@ -29,7 +29,7 @@ At Arcadia Science, repositories should follow basic guidelines.
 - **Branches**: At Arcadia Science, we work on repositories using branches and not forks. Forks are error-prone and can go out-of-sync in the case of renamings etc.
   - The default branch name is `main.`
 - **Working in branches**
-  - For each code change, feature or a fix, create a new branch. The branch names should be all lowercase and should follow this naming convention: `<your initials>/<brief description of the code change>`. Example: `fmc/policy-source-control`.
+  - For each code change, feature or a fix, create a new branch. The branch names should be all lowercase and should follow this naming convention: `<your initials>/<brief description of the code change>`. Example: `fmc/standard-source-control`.
   - Make your change and push it to the branch.
   - Create a pull request into the repository owned by Arcadia Science. If your pull request is not ready for review, but you’d like to still open one, you can open a draft pull request.
   - Before asking for reviews on a pull request, make sure your code is tested and runs successfully.
@@ -48,8 +48,8 @@ At Arcadia Science, repositories should follow basic guidelines.
 - **Composition of Pull Requests:** Each pull request may contain one or more code changes as long as they focus on a specific task. In keeping with good source control practice, each change or commit should contain all changes necessary for a particular fix or update. In addition, each pull request should relate to no more than one functional area in the code base you are updating. Keeping the pull request focused to one area will most likely keep them short. Short pull requests make it easier for your reviewers to provide thoughtful and quick feedback. Quick feedback means you can quickly address concerns and get your pull request merged. In general, shorter and more focused pull requests are better than longer ones. Having said that, there's no silver bullet heuristic for what "short" means. Sometimes, it may not be feasible especially as part of data science projects. And it is language, project and context dependent.
 - **Reviewing Pull Requests:** We expect that all team members will participate in review of pull requests. If you get named by the submitter, it's courteous to review the request. People can get busy or miss the review submission. It’s the responsibility of the person seeking review to pursue the reviewer to make sure code changes are committed in a timely manner. While all code-related discussion should occur publicly on GitHub, it is appropriate to nudge people about reviews or check about their timeline using DMs in slack.
   - Potential suggested code review checklist: [https://github.com/greenelab/onboarding/blob/master/extras/code_review_checklist.md](https://github.com/greenelab/onboarding/blob/master/extras/code_review_checklist.md)
-- **Merging Pull Requests:** Once your code is reviewed and pull request is approved, it's time to merge your changes. There are 3 methods of merging a PR via git: **Merge** will create a merge commit that joins two branches together. **Rebase** rewrites history on top of a branch to create a linear history. **Squash and merge** creates a single new squashed commit that encompasses all commits in the feature branch. At Arcadia Science, we use the first option and merge pull requests by creating a merge commit. This is because it preserves the most amount of context for a pull request (where it initially branched off and the individual commits as part of it) compared to the other options. You can enforce this policy by updating your repository settings to look like this:
-  <img width="786" alt="Pull request merge policy" src="https://user-images.githubusercontent.com/2692053/189219208-891f3bd2-e4d7-476b-b9a1-1d795879f2b9.png">
+- **Merging Pull Requests:** Once your code is reviewed and pull request is approved, it's time to merge your changes. There are 3 methods of merging a PR via git: **Merge** will create a merge commit that joins two branches together. **Rebase** rewrites history on top of a branch to create a linear history. **Squash and merge** creates a single new squashed commit that encompasses all commits in the feature branch. At Arcadia Science, we use the first option and merge pull requests by creating a merge commit. This is because it preserves the most amount of context for a pull request (where it initially branched off and the individual commits as part of it) compared to the other options. You can enforce this by updating your repository settings to look like this:
+  <img width="786" alt="Pull request merge standard" src="https://user-images.githubusercontent.com/2692053/189219208-891f3bd2-e4d7-476b-b9a1-1d795879f2b9.png">
 
 ### What not to keep under version control
 
@@ -83,7 +83,7 @@ Jupyter notebooks are great data science tools as they combine code, output, and
 
 - Before any of this, please consult our legal counsel to make sure there are not licensing and legal problems with your collaboration.
 - If you’re working on an Arcadia Science repository with outside collaborators, the repository is most likely already public. If so, that’s great! If the repository is private, you can include the Github account to the repository as an “outside collaborator”.
-- Either way, the rules in this policy as it pertains to code review and working in branches apply to outside collaborators as well.
+- Either way, the rules in this document as it pertains to code review and working in branches apply to outside collaborators as well.
 - If you plan to actively work on a repository with outside collaborators, it’s recommended to add `CONTRIBUTING.MD` and `CODE_OF_CONDUCT.md` files to the root of the repository to set expectations ahead of time. Default templates for these will be available soon.
 
 ## Common pitfalls & tricks to overcome them
@@ -105,4 +105,4 @@ It’s entirely possible to get stuck in a squiggly quagmire of git branches and
 
 ## Credits
 
-- Many sections of this policy document are shamelessly copied from the [onboarding documentation of Casey Greene’s lab](https://github.com/greenelab/onboarding/blob/master/onboarding.md). Many thanks to Casey Greene for sharing this document and allowing us to use it.
+- Many sections of this document are shamelessly copied from the [onboarding documentation of Casey Greene’s lab](https://github.com/greenelab/onboarding/blob/master/onboarding.md). Many thanks to Casey Greene for sharing this document and allowing us to use it.
