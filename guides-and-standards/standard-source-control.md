@@ -5,7 +5,7 @@
 ## TLDR
 
 - [Arcadia Science](https://www.arcadiascience.com/) uses [Git](https://git-scm.com/) and [GitHub](https://github.com/) for version control.
-- Repositories on Github should be created as private and in the Arcadia-Science organization until you have further IP guidance.
+- Repositories on GitHub should be created as private and in the Arcadia-Science organization until you have further IP guidance.
 - Each repository should have an open license and a descriptive README.
 - Code and documentation are added throughout a project, not at the time of publication.
 - Work is done in branches and integrated into the main branch through pull requests.
