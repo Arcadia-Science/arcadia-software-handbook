@@ -1,0 +1,27 @@
+name: lint
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+    build:
+      runs-on: ubuntu-latest
+  
+      steps:
+      - uses: actions/checkout@v2
+  
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '21'
+  
+      - name: Install Dependencies
+        run: npm install
+  
+      - name: Lint Markdown Files
+        run: make lint
