@@ -1,5 +1,18 @@
 {
+    "proseWrap": "always",
+    "printWidth": 100,
+    "tabWidth": 2,
+    "useTabs": false,
     "semi": false,
     "singleQuote": true,
-    "proseWrap": "always"
+    "trailingComma": "none",
+    "bracketSpacing": true,
+    "overrides": [
+        {
+            "files": "*.md",
+            "options": {
+                "parser": "markdown"
+            }
+        }
+    ]
 }
