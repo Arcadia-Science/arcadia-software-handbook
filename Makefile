@@ -1,10 +1,10 @@
 
 .PHONY: format
 format:
-	npm run format-md-fix
-	npm run lint-md-fix
+	npm run format
+	npm run lint-fix
 
 .PHONY: lint
 lint:
-	npm run lint-md
-	npm run format-md-check
+	npm run lint
+	npm run format-check
