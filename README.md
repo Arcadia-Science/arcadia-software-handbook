@@ -19,5 +19,4 @@ To propose a change, submit a pull request. Consider the following goals of the 
 
 ## License
 
-This repository is dedicated to the public domain.
-See the [`LICENSE`](LICENSE) file for more details.
+This repository is dedicated to the public domain. See the [`LICENSE`](LICENSE) file for more details.

@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "lint": "markdownlint '**/*.md' --ignore node_modules",
+    "lint-fix": "markdownlint '**/*.md' --fix --ignore node_modules",
+    "format-check": "prettier --check '**/*.md'",
+    "format": "prettier --write '**/*.md'"
+  },
+  "devDependencies": {
+    "markdownlint-cli": "^0.40.0",
+    "prettier": "^3.2.5"
+  }
+}
