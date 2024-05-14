@@ -1,6 +1,6 @@
 # Source control
 
-- This standard describes core software engineering standards at Arcadia Science, as it pertains to version control and data management.
+This standard describes core software engineering standards related to version control and data management at Arcadia Science.
 
 ## TLDR
 

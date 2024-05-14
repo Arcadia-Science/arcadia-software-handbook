@@ -8,8 +8,11 @@ We have Arcadia-specific templates for [Python](https://github.com/Arcadia-Scien
 
 ## Standards for organization and documentation
 
-- **Directory structure**: The repository should be well-organized with descriptive file names and a clear directory structure. For example, scripts, notebooks, and data files should generally be in separate directories. Directory names and filenames should not include spaces or special characters.
-- **Descriptive README**: The repository should include a thorough and clear README that explains the context and purpose of the repo, what the code does, and how to use it. In particular, the README should include the following:
+- **Repository organization**: The repository should be well-organized with descriptive file names and a clear directory structure.
+  - Scripts, notebooks, and data files should generally be in separate directories.
+  - Directory names and filenames should not include spaces or special characters.
+  - Avoid very long scripts or notebooks. If a script or notebook is more than 500-1000 lines long, consider breaking it up into smaller scripts or functions.
+- **Descriptive README**: The repository should include a thorough and clear README that explains the context and purpose of the repo, what the code does, and how to use it.
   - The README should explain how to create the same environment that was originally used to run the code. This includes the operating system you ran the code on, the software you installed, and the version of the software.
   - The README should include an explanation of how to access or prepare any data needed to run the code.
 - **Dependency versions**: The exact versions of all direct dependencies (i.e., Python and/or R packages) used in the repository should be listed. Typically, this takes the form of a Conda environment file (usually `envs/dev.yml`).
@@ -22,16 +25,21 @@ We have Arcadia-specific templates for [Python](https://github.com/Arcadia-Scien
 
 ## Standards for code quality
 
-- Variable and function names should be descriptive and meaningful. Avoid ambiguous or unnecessary abbreviations and avoid single-letter variable names.
-- All functions should have docstrings that explain _what_ the function does. These do not have to be extensive; they just need to give the reader a basic understanding of the purpose of the function.
-- Non-obvious parts of the code should include comments that explain _why_ the code is doing what it is doing (rather than _what_ it is doing). For example, when your code runs a particular algorithm, a comment should be included to explain why that particular algorithm was chosen.
-- Code should not include any absolute paths (e.g. `/home/ubuntu/my_work_dir/` or `~/Desktop/my_work_dir`). Instead, use relative paths (e.g. `../data/`) or provide a way for the user to specify their own local path using a CLI argument, a configuration parameter, or an environment variable.
+- Code should be as clear and well-documented as possible. This includes using descriptive variable names and using comments where appropriate to explain complex or non-obvious parts of the code.
+- Code and documentation should be free of absolute paths (e.g. `/home/ubuntu/my_work_dir/` or `~/Desktop/my_work_dir`). Instead, use relative paths (e.g. `../data/`) or provide a way for the user to specify their own local path using a CLI argument, a configuration parameter, or an environment variable.
+- Code should be formatted and linted. The specific tools used for this will depend on the language:
+  - Python repositories should use `ruff` for linting and `ruff format` for formatting. (The [Python template](https://github.com/Arcadia-Science/python-analysis-template) includes this by default.)
+  - R repositories should use `lintr` for linting. (The [R template](https://github.com/Arcadia-Science/r-analysis-template) includes this by default.)
+  - Snakemake repositories should use `ruff` for formatting and linting and `snakefmt` to format snakefiles.
 
-### Python and Snakemake repositories
+## [Optional] Additional standards for code quality
 
-- Code style should adhere to [PEP8](https://www.python.org/dev/peps/pep-0008/) as much as possible. This means using `snake_case` for variable and function names, `CamelCase` for class names, and `UPPER_SNAKE_CASE` for constants.
-- `ruff` should be used for formatting and linting (our [Python template](https://github.com/Arcadia-Science/python-analysis-template) includes this by default).
+These additional standards are recommended, as they will make your code more readable, maintainable, and reproducible, but they are not strictly required.
 
-### R repositories
+- Variable and function names should be descriptive, accurate, and unambiguous. Avoid unnecessary abbreviations and do not use single-letter names.
+- All functions should have docstrings or comments that explain what the function does, how to use it, and the purpose and type of its arguments. This is particularly important for functions that are intended to be used by others.
+- Non-obvious parts of the code should include comments that explain _why_ the code is doing what it is doing (rather than _what_ it is doing). For example, when your code uses a particular algorithm, a comment should be included to explain why that particular algorithm was chosen.
+- Do not comment-out blocks of code, as this makes the code hard to read and maintain. Instead, either move the code into a conditional/if block, move it to a separate branch or file, or delete it entirely.
+- Python code style should adhere to [PEP8](https://www.python.org/dev/peps/pep-0008/) as much as possible. This means using `snake_case` for variable and function names, `CamelCase` for class names, and `UPPER_SNAKE_CASE` for constants.
 
-- `lintr` should be used for linting. (our [R template](https://github.com/Arcadia-Science/r-analysis-template) includes this by default).
+These standards are a condensed subset of the formatting and style conventions described in more detail in [this AUG lesson](https://training.arcadiascience.com/arcadia-users-group/20240206-intro-to-formatting-and-linting/lesson/arcadia-users-group/20240206-intro-to-formatting-and-linting/).
