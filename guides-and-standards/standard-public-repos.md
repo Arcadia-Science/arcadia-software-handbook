@@ -4,7 +4,7 @@ This document describes the standards for public GitHub repositories at Arcadia.
 
 ## Aside about repository templates
 
-We have Arcadia-specific templates for [Python](https://github.com/Arcadia-Science/python-analysis-template), [Snakemake](https://github.com/Arcadia-Science/snakemake-template), and [R](https://github.com/Arcadia-Science/r-analysis-template) repositories. It is strongly recommended to start new projects using these templates, as this will mean that your repository will automatically satisfy many of the requirements below.
+We have Arcadia-specific templates for [Python](https://github.com/Arcadia-Science/python-analysis-template), [R](https://github.com/Arcadia-Science/r-analysis-template), [Snakemake](https://github.com/Arcadia-Science/snakemake-template), and [Nextflow](https://github.com/Arcadia-Science/nextflow-template-repository) repositories. It is strongly recommended to start new projects using these templates, as this will mean that your repository will automatically satisfy many of the requirements below.
 
 ## Standards for organization and documentation
 
@@ -21,7 +21,7 @@ We have Arcadia-specific templates for [Python](https://github.com/Arcadia-Scien
 - **No large files**: The repository should not include files larger than 100MB, even if they are necessary for the code to run. If you need to include large files, they should be hosted on Zenodo or an appropriate domain-specific archive (e.g., the SRA) and a link to the files should be included in the README.
 - **No sensitive information**: The repository should not include any sensitive or private information like API keys or access credentials. If the code requires sensitive information to run, it should be stored in a separate configuration file that is not included in the repository. If you accidentally added sensitive information to your repository, please reach out to the software team for help. **It is not sufficient to delete the sensitive information in a subsequent commit**, as the information will still exist in the commit history.
 - **License**: The repository should use the MIT license.
-  - Caveat: make sure that this license is compatible with the licenses of the software/dependencies used in your project (it usually is). Please check with the software team if you are unsure about this.
+  - Caveat: make sure that this license is compatible with the licenses of the software/dependencies used in your project (it usually is). Please check with both the legal team and the software team if you are unsure about this.
 
 ## Standards for code quality
 
