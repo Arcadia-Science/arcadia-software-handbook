@@ -15,7 +15,7 @@ We often expect that a computational analysis we write at Arcadia will either be
 
 A dependency is any software tool that is required to make your tool work. For example, BLAST is a dependency of ProteinCartography and OrthoFinder is a dependency of NovelTree. Below we include some signals for assessing whether a software tool is high quality.
 
-### Critical — we can’t use the tool if these criteria are not met
+### Critical criteria (we can’t use the tool if it does not meet these criteria)
 
 - **The tool has a license and the license is permissible for commercial use.** Common licenses like BSD2, BSD3, GPL3, and MIT can all be used. Some other licenses can be used as well.
   - Hint: you can search for the word "commercial" in the license. This will often take you to text about whether the software can be used commercially. If it can’t, it will usually say something like "for non-commercial use only."
@@ -23,7 +23,7 @@ A dependency is any software tool that is required to make your tool work. For e
 - **The tool can be run on a Linux platform.** This is a requirement\* for things dockerization and for running on AWS.
   - *It’s not actually a*requirement\* — the Mac operating systems can’t really be dockerized, but Windows can. Similarly, there are Windows operating systems on AWS but these are sometimes annoying to use.
 
-### Important — think carefully before proceeding with the tool if these criteria are not met
+### Important criteria (think carefully before proceeding if the tool does not meet these criteria)
 
 - **The software code is on GitHub or another popular developer platform like GitLab or BitBucket.** Using these platforms signals that the tool is open source and likely versioned. Sometimes you'll find code on SourceForge. This is ok and potentially workable, but not the best. Sometimes you'll find code in the supplement of a paper. This is not awesome and probably signals that the tool will be hard to install or use but you can still try if you really want to.
 - **The tool is easily installable.** To be able to use a tool, we need to be able to install it. Below I’ve included somewhat arbitrary gradations of what makes something easy to install. You can check these things by eye to quickly see if you think a tool will be installable, but often the best way to determine this is to install and use the tool.
@@ -35,7 +35,7 @@ A dependency is any software tool that is required to make your tool work. For e
   - Difficult: git clone & compile from source
   - Difficult: No installation instructions
 
-### Nice — but not necessary if you’re willing to do the leg work to make sure the tool works
+### Criteria that are nice to have (but not necessary if you’re willing to do the leg work to make sure the tool works)
 
 - **The tool has tests.** Tests ensure the accuracy and quality of a software tool. See [this AUG](https://training.arcadiascience.com/arcadia-users-group/20231104-testing-concepts/lesson/) for more about software tests.
   - Hint: tests will often be a `test/` or `tests` folder, either in the root of the repository or
@@ -44,7 +44,7 @@ A dependency is any software tool that is required to make your tool work. For e
   - Hint: there are responses to issues
 - **The software is well-written.**
   - Hint: no `.DS_Store` files visible in any folder of the repository
-  - Hint: the repository has a reasonable structure
+  - Hint: the repository has a reasonable structure with clear and descriptive filenames.
   - Hint: the software is written in functions
   - Hint: there are no absolute paths in the software
   - Hint: the software is packaged with or has documentation for obtaining demo data so you can quickly try to run the tool.
