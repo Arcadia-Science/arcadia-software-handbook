@@ -8,7 +8,7 @@ We have Arcadia-specific templates for [Python](https://github.com/Arcadia-Scien
 
 ## Standards for organization and documentation
 
-- **Repository organization**: The repository should be well-organized with descriptive file names and a clear directory structure.
+- **Repository organization**: The repository should be well-organized with descriptive and consistent file names and a clear directory structure.
   - Scripts, notebooks, and data files should generally be in separate directories.
   - Directory names and filenames should not include spaces or special characters.
   - Avoid very long scripts or notebooks. The definition of "very long" depends on context and language, but a good rule of thumb is that all files (whether modules, scripts, and notebooks) should contain code related to one specific purpose. For typical Python and R projects, this definition _generally_ corresponds to a length of around 1000 lines.
@@ -22,8 +22,8 @@ We have Arcadia-specific templates for [Python](https://github.com/Arcadia-Scien
   - Caveat: when developing libraries or packages, it may be more appropriate to specify a minimum version, rather than an exact version, for some dependencies, so that users of the package can install the latest versions of its dependencies. Please check with the software team if you are unsure about this.
 - **No large files**: The repository should not include files larger than 100MB, even if they are necessary for the code to run. If you need to include large files, they should be hosted on Zenodo or an appropriate domain-specific archive (e.g., the SRA). In rare cases where neither of these options are possible or appropriate, a custom public S3 bucket can be used. In all cases, a link to the files should be included in the README.
 - **No sensitive information**: The repository should not include any sensitive or private information like API keys or access credentials. If the code requires sensitive information to run, it should be stored in a separate configuration file that is not included in the repository. If you accidentally added sensitive information to your repository, please reach out to the software team for help. **It is not sufficient to delete the sensitive information in a subsequent commit**, as the information will still exist in the commit history.
-- **License**: The repository should use the MIT license.
-  - Caveat: make sure that this license is compatible with the licenses of the software/dependencies used in your project (it usually is). Please check with both the legal team and the software team if you are unsure about this.
+- **License**: The repository should use the MIT license, if possible. Please refer to [this notion page](https://www.notion.so/arcadiascience/Coding-at-Arcadia-Software-Licensing-Policy-9054a0b178d74a42a7a4ad41de46a671?pvs=4) for more information.
+  - Caveat: the MIT license is not compatible with most, but not all, other open-source software licenses. If your project uses software with an incompatible license, you will need to use another license. Please check with both the legal team and the software team if you are unsure about this.
 - **Repository settings**: To protect the repository from unintended changes, branch protection rules should be configured for the `main` branch. Please refer to the [this notion page](https://www.notion.so/arcadiascience/How-to-manage-paired-public-and-private-GitHub-repos-2c3e96d6097943a099c3cdc0ab8789df) for more information.
 
 ## Standards for code quality
@@ -39,7 +39,8 @@ We have Arcadia-specific templates for [Python](https://github.com/Arcadia-Scien
 
 These additional standards are recommended, as they will make your code more readable, maintainable, and reproducible, but they are not strictly required.
 
-- Variable and function names should be descriptive, accurate, and unambiguous. Avoid unnecessary abbreviations and do not use single-letter names.
+- In addition to being descriptive, variable and function names should be unambiguous and should not include unnecessary abbreviations.
+- Avoid single-letter variable names except in for-loops or in other local contexts in which their meaning is unambiguous.
 - All functions should have docstrings or comments that explain what the function does, how to use it, and the purpose and type of its arguments. This is particularly important for functions that are intended to be used by others.
 - Non-obvious parts of the code should include comments that explain _why_ the code is doing what it is doing (rather than _what_ it is doing). For example, when your code uses a particular algorithm, a comment should be included to explain why that particular algorithm was chosen.
 - Do not comment-out blocks of code, as this makes the code hard to read and maintain. Instead, either move the code into a conditional/if block, move it to a separate branch or file, or delete it entirely.
