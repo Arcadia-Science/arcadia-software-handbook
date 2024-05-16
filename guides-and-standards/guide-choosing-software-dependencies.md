@@ -25,12 +25,13 @@ A dependency is any software tool that is required to make your tool work. For e
 
 ### Important — think carefully before proceeding with the tool if these criteria are not met
 
-- **The software code is on GitHub or another popular developer platform like GitLab or BitBucket.** Using these platforms signals that the tool is open source and likely versioned. Sometimes you'll find code on SourceForge. This is ok and potentially workable, but not the best. Sometimes you'll find code in the supplement of a paper. This is not awesome and probably signals that the tool will be hard to install or use but you can still try if you really want to.
+- **The software code is on GitHub or another popular developer platform like GitLab or BitBucket.** 
+These platforms are widely used for versioning software and indicate that the tool is open source. Tools using these platforms are also more likely to be regularly updated and maintained. Software found on SourceForge can still be viable, although this platform is less commonly used for new projects. Tools hosted here may not be maintained as actively, which can lead to outdated dependencies and less community support. Code provided in the supplements of academic papers often lacks extensive documentation and user support, which can make installation and integration more challenging. If someone chooses to provide their code in a supplement instead of providing a URL to a GitHub repository, they may not be aware of general software engineering tools that can help improve the quality of code (tests, linting, etc.). If this code is packaged with a license that makes the re-use terms clear, you can still try and use it if there are no other tools available that accomplish your goals.
 - **The tool is easily installable.** To be able to use a tool, we need to be able to install it. Below I’ve included somewhat arbitrary gradations of what makes something easy to install. You can check these things by eye to quickly see if you think a tool will be installable, but often the best way to determine this is to install and use the tool.
   - Very easy: cross-platform installation as a conda package
   - Easy: installable from another package repository with another package manager like pip or poetry (python) or `install_packages()` (R)
   - Somewhat easy: Installable from GitHub with a package manager
-  - Somewhat easy: Has a dockerfile and an available Docker container
+  - Somewhat easy: Has a dockerfile (a recipe from which a Docker container can be built)
   - Somewhat difficult: has an environment yaml file or requirements.txt file that lists versioned dependencies and has installation instructions that involve cloning the repository
   - Difficult: git clone & compile from source
   - Difficult: No installation instructions
@@ -42,10 +43,12 @@ A dependency is any software tool that is required to make your tool work. For e
 - **The software is maintained.**
   - Hint: there is a difference in the timestamp between the first and last commit and the last commit occurred recently (~months)
   - Hint: there are responses to issues
+  - Hint: look for a history of closed Pull Requests
+  - Hint: look at the "insights" page on GitHub. The "contributors" tab will show contributions over time
 - **The software is well-written.**
   - Hint: no `.DS_Store` files visible in any folder of the repository
   - Hint: the repository has a reasonable structure
-  - Hint: the software is written in functions
+  - Hint: the code is well-organized, includes comments and docstrings, and appears to be readable
   - Hint: there are no absolute paths in the software
   - Hint: the software is packaged with or has documentation for obtaining demo data so you can quickly try to run the tool.
 - **Other people use the software.** This signals that other people believe in the method and that other people were able to install and use the software.
@@ -55,5 +58,6 @@ A dependency is any software tool that is required to make your tool work. For e
 ## Ideas for finding quality software
 
 - Search [conda](https://anaconda.org/anaconda/repo), [PyPI](https://pypi.org/), or other software package repositories with keywords relevant to your task. The search engines for different software package repositories are different so your mileage will vary. However, if you can find a tool this way, the chances are good that it will be easy to install and mediocre that the software will be high quality.
+- Search GitHub directly for repositories that match your keywords. Starting from the search bar, you can search for different combinations of key words that you think other people might use to describe the software they wrote that does the things you're interested in. GitHub will return results in code, repositories, issues, etc. Click on some of the matches to see if they lead you to quality software.
 - Search Google Scholar with your keywords plus "GitHub." This may highlight studies that have published software. You can filter to recent papers or select papers that are highly cited.
 - Look at the [nf-core modules](https://github.com/nf-core/modules) repository. If a tool makes it into that repo, it can be containerized, installed on Linux, run on the command line, and is usually fairly high quality. Make sure to check the license to make sure you can use the tool. While you're there, you can look to see if an existing [nf-core workflow](https://github.com/nf-core) already meets your full analysis needs.
