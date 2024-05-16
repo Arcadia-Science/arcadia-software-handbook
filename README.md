@@ -4,8 +4,14 @@ This repository is home to the core software engineering guides and standards at
 
 ## Naming conventions
 
-- A **guide** document describes software engineering best practices for reusable and reproducible work. These are sensible defaults and exceptions to the rule are expected to happen.
-- A **standard** document describes a company operating standard that all Arcadians are expected to comply with.
+- A **guide** describes software engineering best practices for reusable and reproducible work. These are sensible defaults and exceptions to the rule are expected to happen.
+- A **standard** describes a company-wide operating standard that all Arcadians are expected to comply with.
+
+## Table of contents
+
+- [**Standard for source control**](/guides-and-standards/standard-source-control.md): This standard defines how to use git and GitHub at Arcadia. This includes naming conventions, repository settings, and how to work with branches and PRs.
+
+- [**Standard for public GitHub repositories**](/guides-and-standards/standard-public-repos.md): This standard lists the requirements with which all GitHub repositories are expected to comply prior to being made public.
 
 ## Contributing
 
