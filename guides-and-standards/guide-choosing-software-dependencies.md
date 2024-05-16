@@ -13,7 +13,7 @@ We often expect that a computational analysis we write at Arcadia will either be
 
 ## Things to look for when deciding to include a tool as a dependency
 
-A dependency is any software tool that is required to make your tool work. For example, BLAST is a dependency of ProteinCartography, and Nextflow and OrthoFinder are dependencies of NovelTree. Below we include some signals for assessing whether a software tool is high quality.
+A dependency is any software tool that is required to make your tool work. For example, BLAST is a dependency of ProteinCartography and OrthoFinder is a dependency of NovelTree. Below we include some signals for assessing whether a software tool is high quality.
 
 ### Critical — we can’t use the tool if these criteria are not met
 
@@ -28,7 +28,7 @@ A dependency is any software tool that is required to make your tool work. For e
 - **The software code is on GitHub or another popular developer platform like GitLab or BitBucket.** Using these platforms signals that the tool is open source and likely versioned. Sometimes you'll find code on SourceForge. This is ok and potentially workable, but not the best. Sometimes you'll find code in the supplement of a paper. This is not awesome and probably signals that the tool will be hard to install or use but you can still try if you really want to.
 - **The tool is easily installable.** To be able to use a tool, we need to be able to install it. Below I’ve included somewhat arbitrary gradations of what makes something easy to install. You can check these things by eye to quickly see if you think a tool will be installable, but often the best way to determine this is to install and use the tool.
   - Very easy: cross-platform installation as a conda package
-  - Easy: installable from another package repository with another package manager like pip (python) or `install_packages()` (R)
+  - Easy: installable from another package repository with another package manager like pip or poetry (python) or `install_packages()` (R)
   - Somewhat easy: Installable from GitHub with a package manager
   - Somewhat easy: Has a dockerfile and an available Docker container
   - Somewhat difficult: has an environment yaml file or requirements.txt file that lists versioned dependencies and has installation instructions that involve cloning the repository
@@ -56,4 +56,4 @@ A dependency is any software tool that is required to make your tool work. For e
 
 - Search [conda](https://anaconda.org/anaconda/repo), [PyPI](https://pypi.org/), or other software package repositories with keywords relevant to your task. The search engines for different software package repositories are different so your mileage will vary. However, if you can find a tool this way, the chances are good that it will be easy to install and mediocre that the software will be high quality.
 - Search Google Scholar with your keywords plus "GitHub." This may highlight studies that have published software. You can filter to recent papers or select papers that are highly cited.
-- Look at the [nf-core modules](https://github.com/nf-core/modules) repository. If a tool makes it into that repo, it can be dockerized, installed on Linux, run on the command line, and is usually fairly high quality. Make sure to check the license to make sure you can use the tool. While you're there, you can look to see if an existing [nf-core workflow](https://github.com/nf-core) already meets your full analysis needs.
+- Look at the [nf-core modules](https://github.com/nf-core/modules) repository. If a tool makes it into that repo, it can be containerized, installed on Linux, run on the command line, and is usually fairly high quality. Make sure to check the license to make sure you can use the tool. While you're there, you can look to see if an existing [nf-core workflow](https://github.com/nf-core) already meets your full analysis needs.
