@@ -11,11 +11,9 @@ This repository is home to the core software engineering guides and standards at
 
 - [**Standard for source control**](/guides-and-standards/standard-source-control.md): This standard defines how to use git and GitHub at Arcadia. This includes naming conventions, repository settings, and how to work with branches and PRs.
 
-- [**Standard for public GitHub repositories**](/guides-and-standards/standard-public-repos.md): This standard lists the requirements with which all GitHub repositories are expected to comply prior to being made public.
+- [**Standard for public GitHub repositories**](/guides-and-standards/standard-public-repos.md): This standard lists the requirements with which all public GitHub repositories must comply.
 
-## Table of contents
-
-- [**Code review guide**](/guides-and-standards/guide-code-review.md): This guide explains the philosophy and purpose of code review at Arcadia, as well as best practices and tips for participating in code reviews.
+- [**Code review guidelines**](/guides-and-standards/guide-code-review.md): This guide explains conventions and best practices for participating in code reviews at Arcadia.
 
 ## Contributing
 
