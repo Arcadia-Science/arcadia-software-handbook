@@ -20,7 +20,11 @@ TODO: the importance of treating the PR in an objective way, as an artifact that
 
 ### When is a PR ready to review?
 
-TODO
+A PR is ready to review when it represents a complete and coherent set of related changes. Generally, these changes should be limited to those necessary to implement a single new feature or add a single kind of new functionality to the code.
+
+However, it is usually acceptable to include a limited number of "drive-by" changes that are unrelated to the main changes made in the PR, as long as they are minor enough that they don't overlap with the main changes or "clutter" the PR in a way that makes it hard to review.
+
+Finally, be sure to write a descriptive title and thorough description for your PR. The description should briefly explain the context and motivation for the PR, as well as summarize the changes it makes.
 
 ### How big should a PR be?
 
@@ -35,7 +39,7 @@ If you find that your PR is growing too large, you can always break it up into s
 
 ### Who should I request a review from?
 
-Everyone at Arcadia is encouraged to participate in code reviews, so you can request a review from anyone you think might be able to provide useful feedback. In general, it is a good practice to request reviews from people who can review different aspects of your PR. For example, someone on the software team might review code structure or implementation details, while a scientist on the discovery team might review conceptual approaches, analysis methods, or interpretation. If you'd like a reviewer to focus on something in particular, feel free to communicate this either in the PR description or on Slack when you request a review.
+Everyone at Arcadia is encouraged to participate in code reviews, so you can request a review from anyone you think might be able to provide useful feedback. In general, it is a good practice to request reviews from people who can review different aspects of your PR. For example, someone on the software team might review code structure or implementation details, while a scientist on the discovery team might review conceptual approaches, analysis methods, or interpretation. If you'd like a reviewer to focus on something in particular, feel free to communicate this either in the PR description or reach out directly to them when you request a review.
 
 ### How many reviews should I request?
 
@@ -43,15 +47,15 @@ Usually, requesting reviews from between one and three reviewers is sufficient. 
 
 ### How long should I wait for a review?
 
-After you request a review from someone on GitHub, it is courteous to allow them around 48 (business) hours to respond. After that time, it is reasonable to reach out directly on Slack or in person to remind them of your request (and to check that they have the bandwidth to do it). If, in the meantime, you receive one or more approving reviews from other reviewers, it is usually acceptable to merge your PR without waiting for the remaining reviewers.
+After you request a review from someone on GitHub, it is courteous to allow them around 48 (business) hours to respond. After that time, it is reasonable to reach out directly on Slack or in person to remind them of your request (and to check that they have the bandwidth to submit a review). If, in the meantime, you receive one or more approving reviews from other reviewers, it is usually acceptable to merge your PR without waiting for the remaining reviewers.
 
 ### How should I respond to review comments?
 
-It is a good practice to acknowledge all comments. For simple comments that can be addressed with small, local changes (e.g., typos or minor bugfixes), a "thumbs up" emoji response is sufficient (and even this is not always necessary). For larger comments that require more complex changes, it is best to respond with a summarization of the changes you made, to help the reviewer re-review your PR.
+It is a good practice to acknowledge most comments. For simple comments that can be addressed with small, local changes (e.g., typos or minor bugfixes), a "thumbs up" emoji response is sufficient (and even this is not always necessary). For larger comments that require more complex changes, it is a good practice to respond with a summarization of the changes you made, to help the reviewer when they re-review your PR.
 
 ### When do I mark a comment as resolved?
 
-If you've resolved a review comment by making changes to the code, you can click the "resolve" button yourself. Comments that trigger a discussion should be left open until an agreement is reached, at which point either you or the reviewer can click "resolve". Ideally, all review comments should be resolved before a PR is merged.
+If you've resolved a review comment by making changes to the code, you can click the "resolve" button yourself. Comments that trigger a discussion should be left open until an agreement is reached, at which point either you or the reviewer can click "resolve." In general, all review comments should be resolved before a PR is merged.
 
 ### What happens if a review is discussed on Slack or in person?
 
@@ -59,19 +63,19 @@ If substantive discussion related to a review happens on Slack or in person, it 
 
 ### What happens if I disagree with a reviewer's feedback?
 
-PR reviews are a collaborative process. Reviewers may make mistakes, misunderstand your code, or have different opinions about what is "best" in a given context. If you disagree with a reviewer's feedback, initiate a discussion in the comment with your reasoning. See the section above on "the spirit of code review" for more details.
+PR reviews are a collaborative process. Reviewers may make mistakes, misunderstand your code, or have different opinions about what is "best" in a given context. If you disagree with a reviewer's feedback, initiate a discussion in the comment with your reasoning. See also the section above on "the spirit of code review."
 
 ### When should I open an issue instead of addressing a comment in a PR?
 
-Some review comments may be too broad, too tangential, or insufficiently urgent to warrant addressing them in your existing PR. In these cases, the usual practice is to reach an agreement about this with the reviewer and then to open a new issue on GitHub that describes the review comment and the proposed changes. This ensures that it's not forgotten and can be addressed in a subsequent PR. It is not necessary to reference the original review comment in the issue.
+Some review comments may be too broad, too tangential, or insufficiently urgent to warrant addressing them in your existing PR. In these cases, the usual practice is to reach an agreement about this with the reviewer and then to open a new issue on GitHub that describes the review comment and the changes necessary to address it. This ensures that the comment is not forgotten about. It is not necessary to reference the original review comment in the issue, although it is nice to credit the reviewer.
 
-Note that there is no need to open issues for changes that you're going to address within your existing open PR.
+Note that there is no need to open issues for comments that you're going to address within your existing open PR.
 
 ### When can I merge my PR?
 
 At Arcadia, we have a policy that all PRs must be approved to be merged, so the simple answer is that you can merge your PR once it has received at least one approving review.
 
-Often, reviewers will request changes with their initial review. This means that, once you've addressed a reviewer's comments, they will need to re-review your PR and approve it. To do this, you can re-request a review from the reviewer on GitHub, which will send them a new GitHub notification. You can also ping the reviewer on Slack to let them know that you've addressed their comments and ask them to re-review.
+Often, reviewers will request changes with their initial review. This means that, once you've addressed the reviewer's comments, they will need to re-review your PR and approve it. To do this, you can re-request a review from the reviewer on GitHub and/or ping the reviewer on Slack to let them know that you've addressed their comments and your PR is ready for them to re-review.
 
 In other cases, a reviewer may approve your PR during their initial review while also making comments or suggestions. This usually indicates that the reviewer felt their comments were minor or inessential and it is up to you to address them at your discretion before merging.
 
@@ -81,43 +85,51 @@ In general, once your PR has one approving review, you may choose to merge your 
 
 ## For PR reviewers
 
-### What to look for when reviewing a PR
+### What should I look for when reviewing a PR?
 
-There are many areas to consider when reviewing a PR. Often, you may not have the time or expertise to review every aspect of a PR in detail; try to focus on the areas that you feel you're best positioned to review or that other reviewers are less likely to review.
-
-Here are some of the most essential general areas to consider when reviewing PRs at Arcadia:
+In general, focus on reviewing the areas or aspects of the PR that you feel you're best positioned to review or that other reviewers are less likely to review. For reference, some of the most essential general areas to consider when reviewing PRs at Arcadia are listed below. These areas are distilled from the requirements listed in the [standards for public repos](standard-public-repos.md); refer to that document for more details.
 
 - **Correctness**: Does the code do what it is supposed to do? Are there any bugs or errors?
 - **Documentation**: Is the code well-documented? Are there clear instructions for how to use the code?
 - **Dependencies**: Are all dependencies listed? Are there any dependencies that are not necessary or that could be removed?
 - **Security**: Are there any security vulnerabilities in the code? Is sensitive information handled securely?
-- **Error handling**: Is the code robust in the face of errors? Are there any potential error conditions that need to be handled?
-- **Impact**: Are there any potential side effects of the changes that are not immediately obvious? Are there any potential downstream effects of the changes?
+- **Error handling**: Is the code sufficiently robust in the face of errors?
+- **Impact**: Are there any potential side effects of the changes that are not immediately obvious?
 
-Due to the nature of the work at Arcadia, other areas related to code quality and performance may be less important than the areas above. These may still be worth focusing on, but it depends on the scope and nature of the PR and the repository. These areas include:
+Depending on the nature and scope of the repository, areas related to code quality may also be important to review. Generally, these areas are less important for analysis code or one-off scripts and more important for code that is likely to be used or developed over time and/or depended on by other users. These areas include:
 
 - **Clarity**: Is the code readable and easy to understand? Are variable names descriptive? Are comments used where necessary?
 - **Consistency**: Does the code follow the same style and conventions as the rest of the project?
-- **Performance**: Is the code efficient? Are there any bottlenecks or performance issues that could be improved?
+- **Performance**: Is the code efficient? Are there any bottlenecks or performance issues that could easily be improved?
 - **Testing**: Are there tests for critical parts of the code? Do the tests cover a reasonable set of possible cases? Are there sufficiently realistic test datasets?
 
-### How to provide feedback
+### How should I provide feedback?
+
+Feedback should always take the form of comments made on the PR itself on GitHub. Comments should usually be on specific lines of code or blocks of code, rather than general comments about the PR as a whole. Rarely, it may be necessary to provide general feedback about the PR as a whole (for example, about a feature that may be missing or a naming convention that is used in many places), but this should be done sparingly.
+
+### How should I phrase my feedback?
 
 Feedback should always focus on the code itself and not on the author. Avoid using language that is accusatory, judgmental, or personal. Instead, use language that is objective, specific, and constructive.
 
 Here are some examples:
 
-- Instead of saying "you should have done X" or even "this code should do X", say "I feel that this code would be clearer if it did X".
-- Instead of saying "you made a mistake here" or "there is a mistake here", say "It looks to me like this may be a mistake because of X".
-- Instead of saying "this is confusing", say "This may be confusing because of X. It would be clearer if it were done Y."
+- Avoid saying "you should have done X" or "this code should do X"; instead, say "I feel that this code would be clearer if it did X".
+- Avoid saying "you made a mistake here" or "there is a mistake here"; instead, say "It looks to me like there may be a mistake here because of X".
+- Avoid saying "this is confusing"; instead, say "This may be confusing because of X. It would be clearer if it were Y."
 
-### When not to comment
+### How should I prioritize my feedback?
 
-When deciding whether to comment on a particular block of code or a particular issue, consider whether your comment is
+Before making a comment, first think carefully about whether the comment warrants the author's attention. In particular, think about whether your comment is likely to improve the code in a meaningful way _for other developers_ or whether it is instead more a reflection of personal preference. For example, comments about variable names are often subjective (as long as the name is descriptive), but comments about _inconsistent_ variable names are usually worth making, as they are likely to make the code hard to understand for others.
 
-### The "nit" prefix
+#### What is a "nit"?
 
-For comments that you feel are worth making but that are so minor or subjective that the author may choose to accept or reject your suggestion at their discretion, the prefix "nit" (short for "nitpick") is often used. For example, "Nit: capitalize this figure label" or "Nit: use `dataframe.empty()` instead of `len(dataframe) == 0`".
+For comments that you feel are worth making but that you wish to indicate are either minor or may be subjective, the prefix "nit" (short for "nitpick") is often used. For example, "Nit: capitalize this figure label" or "Nit: use `dataframe.empty()` instead of `len(dataframe) == 0`". Usually, it is understood that the author may choose to accept or reject such comments at their discretion, without further discussion.
+
+### When should I approve a PR?
+
+You'll likely notice at least a few important issues during your initial review that must be addressed before the PR can be merged (note that these could be "minor but major," like typos in variable names). In these cases, you should submit your initial review with a "changes requested" status. Once the author has adequately addressed your feedback, you'll need to re-review the PR and submit a second, approving review. Usually, this step is a formality and does not involve additional comments or changes.
+
+If, on the other hand, your initial review does not surface any critical issues, then it is acceptable to skip the re-review process and submit your initial review as an approval (sometimes called "approving with comments"). In this case, there is usually an implicit understanding that any comments in your review are minor enough that the author can address them at their descretion.
 
 ## [For authors] Additional tips
 
