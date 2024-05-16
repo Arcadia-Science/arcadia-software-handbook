@@ -23,12 +23,12 @@ We have Arcadia-specific templates for [Python](https://github.com/Arcadia-Scien
 - **No large files**: The repository should not include files larger than 100MB, even if they are necessary for the code to run. If you need to include large files, they should be hosted on Zenodo or an appropriate domain-specific archive (e.g., the SRA). In rare cases where neither of these options are possible or appropriate, a custom public S3 bucket can be used. In all cases, a link to the files should be included in the README.
 - **No sensitive information**: The repository should not include any sensitive or private information like API keys or access credentials. If the code requires sensitive information to run, it should be stored in a separate configuration file that is not included in the repository. If you accidentally added sensitive information to your repository, please reach out to the software team for help. **It is not sufficient to delete the sensitive information in a subsequent commit**, as the information will still exist in the commit history.
 - **License**: The repository should use the MIT license, if possible. Please refer to [this notion page](https://www.notion.so/arcadiascience/Coding-at-Arcadia-Software-Licensing-Policy-9054a0b178d74a42a7a4ad41de46a671?pvs=4) for more information.
-  - Caveat: the MIT license is not compatible with most, but not all, other open-source software licenses. If your project uses software with an incompatible license, you will need to use another license. Please check with both the legal team and the software team if you are unsure about this.
-- **Repository settings**: To protect the repository from unintended changes, branch protection rules should be configured for the `main` branch. Please refer to the [this notion page](https://www.notion.so/arcadiascience/How-to-manage-paired-public-and-private-GitHub-repos-2c3e96d6097943a099c3cdc0ab8789df) for more information.
+  - Caveat: the MIT license is compatible with most, but not all, other open-source software licenses. If your project uses software with an incompatible license, you will need to use a different license. Please check with both the legal team and the software team if you are unsure about this.
+- **Repository settings**: To protect the repository from unintended changes, branch protection rules should be configured for the `main` branch. Please refer to the [this notion page](https://www.notion.so/arcadiascience/How-to-manage-paired-public-and-private-GitHub-repos-2c3e96d6097943a099c3cdc0ab8789df) for details.
 
 ## Standards for code quality
 
-- Code should be as clear and well-documented as possible. This includes using descriptive variable names and using comments where appropriate to explain complex or non-obvious parts of the code.
+- Code should be clear and well-documented. This includes using descriptive variable names and using comments where appropriate to explain complex or non-obvious parts of the code.
 - Code and documentation should be free of absolute paths (e.g. `/home/ubuntu/my_work_dir/` or `~/Desktop/my_work_dir`). Instead, use relative paths (e.g. `../data/`) or provide a way for the user to specify their own local path using a CLI argument, a configuration parameter, or an environment variable.
 - Code should be formatted and linted. The specific tools used for this will depend on the language:
   - Python repositories should use `ruff` for linting and `ruff format` for formatting. (The [Python template](https://github.com/Arcadia-Science/python-analysis-template) includes this by default.)
@@ -37,7 +37,7 @@ We have Arcadia-specific templates for [Python](https://github.com/Arcadia-Scien
 
 ## [Optional] Additional standards for code quality
 
-These additional standards are recommended, as they will make your code more readable, maintainable, and reproducible, but they are not strictly required.
+These additional standards are recommended, as they will make your code more readable, maintainable, and reproducible, but they are not strictly required. They are condensed from the formatting and style conventions described in more detail in [this AUG lesson](https://training.arcadiascience.com/arcadia-users-group/20240206-intro-to-formatting-and-linting/lesson/).
 
 - In addition to being descriptive, variable and function names should be unambiguous and should not include unnecessary abbreviations.
 - Avoid single-letter variable names except in for-loops or in other local contexts in which their meaning is unambiguous.
@@ -45,5 +45,3 @@ These additional standards are recommended, as they will make your code more rea
 - Non-obvious parts of the code should include comments that explain _why_ the code is doing what it is doing (rather than _what_ it is doing). For example, when your code uses a particular algorithm, a comment should be included to explain why that particular algorithm was chosen.
 - Do not comment-out blocks of code, as this makes the code hard to read and maintain. Instead, either move the code into a conditional/if block, move it to a separate branch or file, or delete it entirely.
 - Python code style should adhere to [PEP8](https://www.python.org/dev/peps/pep-0008/) as much as possible. This means using `snake_case` for variable and function names, `CamelCase` for class names, and `UPPER_SNAKE_CASE` for constants.
-
-These standards are a condensed subset of the formatting and style conventions described in more detail in [this AUG lesson](https://training.arcadiascience.com/arcadia-users-group/20240206-intro-to-formatting-and-linting/lesson/).
