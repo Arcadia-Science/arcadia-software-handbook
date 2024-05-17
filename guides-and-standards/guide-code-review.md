@@ -12,9 +12,7 @@ We review code to ensure that the code we write is of high quality, well-documen
 
 ### The spirit of code review
 
-As with any form of constructive or critical feedback, empathy and trust are the foundation of effective code reviews. It is important to remember that we will all be both authors and reviewers at various times and to provide and respond to feedback in a way that is respectful, constructive, and professional.
-
-TODO: the importance of treating the PR in an objective way, as an artifact that both author and reviewer are working on together, and that neither "own" but that both are collectively responsible for.
+As with any form of constructive or critical feedback, empathy and trust are the foundation of effective code reviews. It is important to remember that we will all be both authors and reviewers at various times and to provide and respond to feedback in a way that is respectful, constructive, and professional. In particular, it may be helpful to think of the code in a rather "cold" and objective way, as an artifact that you (whether as an author or reviewer) are working on in collaboration with others, and one that neither its author nor reviewers "own" but for which both are, collectively, responsible.
 
 ## For PR authors
 
