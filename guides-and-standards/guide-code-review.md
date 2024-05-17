@@ -73,13 +73,15 @@ PR reviews are a collaborative process. Reviewers may make mistakes, misundersta
 
 Some review comments may be too broad, too tangential, or insufficiently urgent to warrant addressing them in your existing PR. In these cases, the usual practice is to reach an agreement about this with the reviewer and then to document the outstanding issue by either opening a new issue for it on GitHub or by adding a `TODO` comment in the code itself. Generally, GitHub issues should be used for comments that would require broad or complex changes, and inline `TODOs` should be used for comments that are specific to a local block or even a single line of code.
 
-Note that it is not necessary to reference the original review comment when opening a GitHub issue, although it is a good practice to credit the reviewer with surfacing the issue. There is no need to open issues for comments that you're going to address within your existing open PR.
+Note that it is not necessary to reference the original review comment when opening a GitHub issue, although it is a good practice to reference the PR itself (by typing the `#` character, followed by the PR number) and/or to credit the reviewer with surfacing the issue (you can tag them using the `@` symbol followed by their GitHub username).
+
+Finally, there is no need to open issues for comments that you're going to address within your existing open PR.
 
 ### When can I merge my PR?
 
 At Arcadia, we have a policy that all PRs must be approved to be merged, so the simple answer is that you can merge your PR once it has received at least one approving review. If you expect reviews from multiple individuals (for example, focusing on different aspects of the code, as mentioned earlier), make sure to let the reviewers know this in the PR, in person, or through other channels, so that they will not overlook a PR that has already been reviewed by someone else.
 
-Often, reviewers will request changes with their initial review. This means that, once you've addressed the reviewer's comments, they will need to re-review your PR and approve it. To do this, you can re-request a review from the reviewer on GitHub and/or ping the reviewer on Slack to let them know that you've addressed their comments and your PR is ready for them to re-review.
+Often, reviewers will request changes with their initial review. This means that, once you've addressed the reviewer's comments, they will need to re-review your PR and approve it. To do this, you can re-request a review from the reviewer on GitHub by clicking on the circular-arrow button next to their name in the list of reviewers (to the right of the PR description). You can also ping the reviewer on Slack to let them know that you've addressed their comments and your PR is ready for them to re-review.
 
 In other cases, a reviewer may approve your PR during their initial review while also making comments or suggestions. This usually indicates that the reviewer felt their comments were minor or inessential and it is up to you to address them at your discretion before merging.
 
