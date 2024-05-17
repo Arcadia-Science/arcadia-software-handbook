@@ -13,6 +13,8 @@ This repository is home to the core software engineering guides and standards at
 
 - [**Standard for public GitHub repositories**](/guides-and-standards/standard-public-repos.md): This standard lists the requirements with which all GitHub repositories are expected to comply prior to being made public.
 
+- [**Guide for choosing software dependencies**](./guides-and-standards/guide-choosing-software-dependencies.md): This guide includes considerations and tips for choosing software dependencies when writing workflows or tools that we expect to be used by other many times.
+
 ## Contributing
 
 To propose a change, submit a pull request. Consider the following goals of the onboarding document:
