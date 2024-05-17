@@ -83,6 +83,10 @@ In general, once your PR has one approving review, you may choose to merge your 
 
 ## For PR reviewers
 
+### How long do I have to review a PR?
+
+Once someone has requested your review on their PR, you may be effectively blocking them from moving forward, so it is important to review the PR as soon as you can (while, of course, not preempting other important tasks you're already working on). If you're unlikely to be able to complete a review within the "two business day" window discussed earlier, reach out to the author to explain this. If the PR is not urgent, they may be able to wait for you to review it later, or else you can suggest other reviewers who may be able to review the PR in your place.
+
 ### What should I look for when reviewing a PR?
 
 In general, focus on reviewing the areas or aspects of the PR that you feel you're best positioned to review or that other reviewers are less likely to review. For reference, some of the most essential general areas to consider when reviewing PRs at Arcadia are listed below. These areas are distilled from the requirements listed in the [standards for public repos](standard-public-repos.md); refer to that document for more details.
@@ -115,7 +119,7 @@ Finally, if you observe a particularly elegant piece of code, or if you learned 
 
 Before making a comment, first think carefully about whether the comment warrants the author's attention. In particular, think about whether your comment is likely to improve the code in a meaningful way _for other developers_ or whether it is instead more a reflection of personal preference. For example, comments about variable names are often subjective (as long as the name is descriptive), but comments about _inconsistent_ variable names are usually worth making, as they are likely to make the code hard to understand for others.
 
-#### What is a "nit"?
+### What is a "nit"?
 
 For comments that you feel are worth making but that you wish to indicate are either minor or may be subjective, the prefix "nit" (short for "nitpick") is often used. For example, "Nit: capitalize this figure label" or "Nit: use `dataframe.empty()` instead of `len(dataframe) == 0`". Usually, it is understood that the author may choose to accept or reject such comments at their discretion, without further discussion.
 
