@@ -20,7 +20,7 @@ As with any form of constructive or critical feedback, empathy and trust are the
 
 A PR is ready to review when it represents a complete and coherent set of related changes. Generally, these changes should be limited to those necessary to implement a single new feature or add a single kind of new functionality to the code.
 
-However, it is usually acceptable to include a limited number of "drive-by" changes that are unrelated to the main changes made in the PR, as long as they are minor enough that they don't overlap with the main changes or "clutter" the PR in a way that makes it hard to review.
+However, it is usually acceptable to include a limited number of "drive-by" changes that are unrelated to the main changes made in the PR, as long as they are minor enough that they don't overlap with the main changes or "clutter" the PR in a way that makes it hard to review. It is customary to list these drive-bys in the PR description, so that the reviewer is not surprised by the inclusion of seemingly unrelated code in the review request.
 
 Finally, be sure to write a descriptive title and thorough description for your PR. The description should briefly explain the context and motivation for the PR, as well as summarize the changes it makes.
 
