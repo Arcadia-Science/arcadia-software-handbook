@@ -71,7 +71,7 @@ Note that there is no need to open issues for comments that you're going to addr
 
 ### When can I merge my PR?
 
-At Arcadia, we have a policy that all PRs must be approved to be merged, so the simple answer is that you can merge your PR once it has received at least one approving review.
+At Arcadia, we have a policy that all PRs must be approved to be merged, so the simple answer is that you can merge your PR once it has received at least one approving review. If you expect reviews from multiple individuals (for example, focusing on different aspects of the code, as mentioned earlier), make sure to let the reviewers know this in the PR, in person, or through other channels, so that they will not overlook a PR that has already been reviewed by someone else.
 
 Often, reviewers will request changes with their initial review. This means that, once you've addressed the reviewer's comments, they will need to re-review your PR and approve it. To do this, you can re-request a review from the reviewer on GitHub and/or ping the reviewer on Slack to let them know that you've addressed their comments and your PR is ready for them to re-review.
 
