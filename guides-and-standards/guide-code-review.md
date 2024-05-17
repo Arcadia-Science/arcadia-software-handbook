@@ -22,7 +22,7 @@ A PR is ready to review when it represents a complete and coherent set of relate
 
 However, it is usually acceptable to include a limited number of "drive-by" changes that are unrelated to the main changes made in the PR, as long as they are minor enough that they don't overlap with the main changes or "clutter" the PR in a way that makes it hard to review. It is customary to list these drive-bys in the PR description, so that the reviewer is not surprised by the inclusion of seemingly unrelated code in the review request.
 
-Finally, be sure to write a descriptive title and thorough description for your PR. The description should briefly explain the context and motivation for the PR, as well as summarize the changes it makes.
+Finally, be sure to write a descriptive title and thorough description for your PR. The description should briefly explain the context and motivation for the PR, as well as summarize the changes it makes. Keep in mind that the PR title will be included in the Git commit log (this is because it is used as the message of the merge commit when the PR is merged), making it particularly important to be clear and concise.
 
 ### How big should a PR be?
 
@@ -104,17 +104,13 @@ Depending on the nature and scope of the repository, areas related to code quali
 ### How should I provide feedback?
 
 Feedback should always take the form of comments made on the PR itself on GitHub. Comments should usually be on specific lines of code or blocks of code, rather than general comments about the PR as a whole. It can be helpful to provide "suggestions" (inline edits) directly, in case of small comments such as typo fixes or a clarification to a code comment; this lets the author accept the changes with a click. Rarely, it may be necessary to provide general feedback about the PR as a whole (for example, about a feature that may be missing or a naming convention that is used in many places), but this should be done sparingly.
-It is good practice to provide context and reasoning in PR comments, rather than just point out an issue with the code. Aside from helping the author understand the comment, this turns the PR into an educational opportunity to improve code practices at Arcadia. For example, instead of saying "this function should take a random seed as an arg", say "this function should take a random seed as an arg and pass it to the underlying calls, so that its output is deterministic across runs".
-### How should I phrase my feedback?
 
-Feedback should always focus on the code itself and not on the author. Avoid using language that is accusatory, judgmental, or personal. Instead, use language that is objective, specific, and constructive.
+It is good practice to provide context and reasoning in PR comments, rather than just point out an issue with the code. Aside from helping the author understand the comment, this turns the PR into an educational opportunity to improve code practices at Arcadia. For example, instead of saying "this function should take a random seed as an argument", say "this function should take a random seed as an argument and pass it to the underlying calls, so that its output is deterministic across runs."
 
-Here are some examples:
+Remember that feedback should always focus on the code itself, not on the author. Avoid using language that is accusatory, judgmental, or personal. Instead, use language that is objective, specific, and constructive. For example, instead of saying "you should have split this code into multiple functions" or "this code should be split into multiple functions", say "I feel that this code would be clearer if it where split into multiple functions" and then include a suggestion about what you think those multiple functions could be.
 
-- Avoid saying "you should have done X" or "this code should do X"; instead, say "I feel that this code would be clearer if it did X".
-- Avoid saying "you made a mistake here" or "there is a mistake here"; instead, say "It looks to me like there may be a mistake here because of X".
-- Avoid saying "this is confusing"; instead, say "This may be confusing because of X. It would be clearer if it were Y."
-If you observe a particularly elegant piece of code, or you learned something new from it, do leave a brief note of appreciation as a PR comment; this reinforces the goal of code review as a collaborative process that improves engineering quality at Arcadia.
+Finally, if you observe a particularly elegant piece of code, or if you learned something new while reviewing a PR, do leave a brief note of appreciation as a PR comment; this reinforces the goal of code review as a collaborative process that improves engineering quality at Arcadia.
+
 ### How should I prioritize my feedback?
 
 Before making a comment, first think carefully about whether the comment warrants the author's attention. In particular, think about whether your comment is likely to improve the code in a meaningful way _for other developers_ or whether it is instead more a reflection of personal preference. For example, comments about variable names are often subjective (as long as the name is descriptive), but comments about _inconsistent_ variable names are usually worth making, as they are likely to make the code hard to understand for others.
