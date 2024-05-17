@@ -103,7 +103,7 @@ Depending on the nature and scope of the repository, areas related to code quali
 
 ### How should I provide feedback?
 
-Feedback should always take the form of comments made on the PR itself on GitHub. Comments should usually be on specific lines of code or blocks of code, rather than general comments about the PR as a whole. Rarely, it may be necessary to provide general feedback about the PR as a whole (for example, about a feature that may be missing or a naming convention that is used in many places), but this should be done sparingly.
+Feedback should always take the form of comments made on the PR itself on GitHub. Comments should usually be on specific lines of code or blocks of code, rather than general comments about the PR as a whole. It can be helpful to provide "suggestions" (inline edits) directly, in case of small comments such as typo fixes or a clarification to a code comment; this lets the author accept the changes with a click. Rarely, it may be necessary to provide general feedback about the PR as a whole (for example, about a feature that may be missing or a naming convention that is used in many places), but this should be done sparingly.
 
 ### How should I phrase my feedback?
 
