@@ -15,15 +15,15 @@ We often expect that a computational analysis we write at Arcadia will either be
 
 A dependency is any software tool that is required to make your tool work. For example, BLAST is a dependency of ProteinCartography and OrthoFinder is a dependency of NovelTree. Below we include some signals for assessing whether a software tool is high quality.
 
-### Critical — we can’t use the tool if these criteria are not met
+### Critical criteria (we can’t use the tool if it does not meet these criteria)
 
 - **The tool has a license and the license is permissible for commercial use.** Common licenses like BSD2, BSD3, GPL3, and MIT can all be used. Some other licenses can be used as well.
   - Hint: you can search for the word "commercial" in the license. This will often take you to text about whether the software can be used commercially. If it can’t, it will usually say something like "for non-commercial use only." If you're unsure, reach out to Katie.
 - **The tool can be run on the command line without human input.** A Graphical User Interface (GUI) (including web applications like Streamlit) is not required to run the tool. The tool isn’t encoded in notebooks.
 - **The tool can be run on a Linux platform.** This is a requirement\* for things dockerization and for running on AWS.
-  - *It’s not actually a*requirement\* — the Mac operating systems can’t really be dockerized, but Windows can. Similarly, there are Windows operating systems on AWS but these are sometimes annoying to use.
+  - *It's not actually a*requirement\* — the Mac operating systems can't really be dockerized, but Windows can. Similarly, there are Windows operating systems on AWS but these are sometimes annoying to use.
 
-### Important — think carefully before proceeding with the tool if these criteria are not met
+### Important criteria (think carefully before proceeding if the tool does not meet these criteria)
 
 - **The software code is on GitHub or another popular developer platform like GitLab or BitBucket.** 
 These platforms are widely used for versioning software and indicate that the tool is open source. Tools using these platforms are also more likely to be regularly updated and maintained. Software found on SourceForge can still be viable, although this platform is less commonly used for new projects. Tools hosted here may not be maintained as actively, which can lead to outdated dependencies and less community support. Code provided in the supplements of academic papers often lacks extensive documentation and user support, which can make installation and integration more challenging. If someone chooses to provide their code in a supplement instead of providing a URL to a GitHub repository, they may not be aware of general software engineering tools that can help improve the quality of code (tests, linting, etc.). If this code is packaged with a license that makes the re-use terms clear, you can still try and use it if there are no other tools available that accomplish your goals.
@@ -36,7 +36,7 @@ These platforms are widely used for versioning software and indicate that the to
   - Difficult: git clone & compile from source
   - Difficult: No installation instructions
 
-### Nice — but not necessary if you’re willing to do the leg work to make sure the tool works
+### Criteria that are nice to have (but not necessary if you’re willing to do the leg work to make sure the tool works)
 
 - **The tool has tests.** Tests ensure the accuracy and quality of a software tool. See [this AUG](https://training.arcadiascience.com/arcadia-users-group/20231104-testing-concepts/lesson/) for more about software tests.
   - Hint: tests will often be a `test/` or `tests` folder, either in the root of the repository or
