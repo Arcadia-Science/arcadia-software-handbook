@@ -18,7 +18,7 @@ A dependency is any software tool that is required to make your tool work. For e
 ### Critical — we can’t use the tool if these criteria are not met
 
 - **The tool has a license and the license is permissible for commercial use.** Common licenses like BSD2, BSD3, GPL3, and MIT can all be used. Some other licenses can be used as well.
-  - Hint: you can search for the word "commercial" in the license. This will often take you to text about whether the software can be used commercially. If it can’t, it will usually say something like "for non-commercial use only."
+  - Hint: you can search for the word "commercial" in the license. This will often take you to text about whether the software can be used commercially. If it can’t, it will usually say something like "for non-commercial use only." If you're unsure, reach out to Katie.
 - **The tool can be run on the command line without human input.** A Graphical User Interface (GUI) (including web applications like Streamlit) is not required to run the tool. The tool isn’t encoded in notebooks.
 - **The tool can be run on a Linux platform.** This is a requirement\* for things dockerization and for running on AWS.
   - *It’s not actually a*requirement\* — the Mac operating systems can’t really be dockerized, but Windows can. Similarly, there are Windows operating systems on AWS but these are sometimes annoying to use.
@@ -47,7 +47,7 @@ These platforms are widely used for versioning software and indicate that the to
   - Hint: look at the "insights" page on GitHub. The "contributors" tab will show contributions over time
 - **The software is well-written.**
   - Hint: no `.DS_Store` files visible in any folder of the repository
-  - Hint: the repository has a reasonable structure
+  - Hint: the repository has a reasonable structure with clear and descriptive filenames
   - Hint: the code is well-organized, includes comments and docstrings, and appears to be readable
   - Hint: there are no absolute paths in the software
   - Hint: the software is packaged with or has documentation for obtaining demo data so you can quickly try to run the tool.
@@ -60,4 +60,4 @@ These platforms are widely used for versioning software and indicate that the to
 - Search [conda](https://anaconda.org/anaconda/repo), [PyPI](https://pypi.org/), or other software package repositories with keywords relevant to your task. The search engines for different software package repositories are different so your mileage will vary. However, if you can find a tool this way, the chances are good that it will be easy to install and mediocre that the software will be high quality.
 - Search GitHub directly for repositories that match your keywords. Starting from the search bar, you can search for different combinations of key words that you think other people might use to describe the software they wrote that does the things you're interested in. GitHub will return results in code, repositories, issues, etc. Click on some of the matches to see if they lead you to quality software.
 - Search Google Scholar with your keywords plus "GitHub." This may highlight studies that have published software. You can filter to recent papers or select papers that are highly cited.
-- Look at the [nf-core modules](https://github.com/nf-core/modules) repository. If a tool makes it into that repo, it can be containerized, installed on Linux, run on the command line, and is usually fairly high quality. Make sure to check the license to make sure you can use the tool. While you're there, you can look to see if an existing [nf-core workflow](https://github.com/nf-core) already meets your full analysis needs.
+- Look at the [nf-core modules](https://github.com/nf-core/modules) repository. If a tool makes it into that repo, it can be containerized, installed on Linux, and run on the command line. Make sure to check the license to make sure you can use the tool. While you're there, you can look to see if an existing [nf-core workflow](https://github.com/nf-core) already meets your full analysis needs.
