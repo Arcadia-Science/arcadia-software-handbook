@@ -29,7 +29,7 @@ Finally, be sure to write a descriptive title and thorough description for your 
 This is highly context-dependent, but in general, PRs should always be small enough that the following are true:
 
 - The PR represents a conceptually coherent set of changes.
-- A reviewer can understand and review the PR in a single sitting (i.e., a few hours).
+- A reviewer can understand and review the PR in a single sitting (i.e., a few hours or less).
 
 PRs that don't follow these guidelines make it more difficult for reviewers to understand all of the changes and provide meaningful feedback. In addition, large PRs tend to slow down the review process, as reviewers may need to spread their review over multiple days.
 
@@ -104,6 +104,10 @@ Depending on the nature and scope of the repository, areas related to code quali
 - **Consistency**: Does the code follow the same style and conventions as the rest of the project? Note: you should generally not need to comment on specific code style; checking for adherence to Arcadia's [style guidelines](https://training.arcadiascience.com/arcadia-users-group/20240206-intro-to-formatting-and-linting/lesson/#style-guides) should be automated by linters and type checkers.
 - **Performance**: Is the code efficient? Are there any bottlenecks or performance issues that could easily be improved?
 - **Testing**: Are there tests for critical parts of the code? Do the tests cover a reasonable set of possible cases? Are there sufficiently realistic test datasets?
+
+### What if I don't feel qualified to review a PR?
+
+You may sometimes be tagged to review a PR but feel that you don't have the expertise to review it for all of the areas listed above. In these cases, it's okay to review only the areas you feel comfortable commenting on and to add a comment to your review listing the areas you were and were not able to give feedback on. If you were tagged to review the entire PR and it is outside your area of expertise, it's still worthwhile to review the code and leave comments on things that do catch your attention. Then, you can communicate with the PR author to find another reviewer for the code (if they haven't already requested another reviewer). This is a great way to learn more about a codebase and to learn more about code review.
 
 ### How should I provide feedback?
 
