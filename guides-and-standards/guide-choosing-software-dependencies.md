@@ -35,25 +35,25 @@ These platforms are widely used for versioning software and indicate that the to
   - Somewhat difficult: has an environment yaml file or requirements.txt file that lists versioned dependencies and has installation instructions that involve cloning the repository
   - Difficult: git clone & compile from source
   - Difficult: No installation instructions
-
-### Criteria that are nice to have (but not necessary if you’re willing to do the leg work to make sure the tool works)
-
-- **The tool has tests.** Tests ensure the accuracy and quality of a software tool. See [this AUG](https://training.arcadiascience.com/arcadia-users-group/20231104-testing-concepts/lesson/) for more about software tests.
-  - Hint: tests will often be a `test/` or `tests` folder, either in the root of the repository or
 - **The software is maintained.**
   - Hint: there is a difference in the timestamp between the first and last commit and the last commit occurred recently (~months)
   - Hint: there are responses to issues
   - Hint: look for a history of closed Pull Requests
   - Hint: look at the "insights" page on GitHub. The "contributors" tab will show contributions over time
+- **Other people use the software.** This signals that other people believe in the method and that other people were able to install and use the software.
+  - Hint: the GitHub repository has a lot of stars
+  - Hint: the paper publishing the software has been cited frequently by other projects that used the tool.
+
+### Criteria that are nice to have (but not necessary if you’re willing to do the leg work to make sure the tool works)
+
+- **The tool has tests.** Tests ensure the accuracy and quality of a software tool. See [this AUG](https://training.arcadiascience.com/arcadia-users-group/20231104-testing-concepts/lesson/) for more about software tests.
+  - Hint: tests will often be a `test/` or `tests` folder, either in the root of the repository or
 - **The software is well-written.**
   - Hint: no `.DS_Store` files visible in any folder of the repository
   - Hint: the repository has a reasonable structure with clear and descriptive filenames
   - Hint: the code is well-organized, includes comments and docstrings, and appears to be readable
   - Hint: there are no absolute paths in the software
   - Hint: the software is packaged with or has documentation for obtaining demo data so you can quickly try to run the tool.
-- **Other people use the software.** This signals that other people believe in the method and that other people were able to install and use the software.
-  - Hint: the GitHub repository has a lot of stars
-  - Hint: the paper publishing the software has been cited frequently by other projects that used the tool.
 
 ## Ideas for finding quality software
 
