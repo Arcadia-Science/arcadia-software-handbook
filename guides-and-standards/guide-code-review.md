@@ -114,7 +114,7 @@ Here are some examples:
 - Avoid saying "you should have done X" or "this code should do X"; instead, say "I feel that this code would be clearer if it did X".
 - Avoid saying "you made a mistake here" or "there is a mistake here"; instead, say "It looks to me like there may be a mistake here because of X".
 - Avoid saying "this is confusing"; instead, say "This may be confusing because of X. It would be clearer if it were Y."
-
+If you observe a particularly elegant piece of code, or you learned something new from it, do leave a brief note of appreciation as a PR comment; this reinforces the goal of code review as a collaborative process that improves engineering quality at Arcadia.
 ### How should I prioritize my feedback?
 
 Before making a comment, first think carefully about whether the comment warrants the author's attention. In particular, think about whether your comment is likely to improve the code in a meaningful way _for other developers_ or whether it is instead more a reflection of personal preference. For example, comments about variable names are often subjective (as long as the name is descriptive), but comments about _inconsistent_ variable names are usually worth making, as they are likely to make the code hard to understand for others.
