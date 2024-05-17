@@ -35,7 +35,7 @@ PRs that don't follow these guidelines make it more difficult for reviewers to u
 
 If you find that your PR is growing too large, you can always break it up into several smaller PRs that can be reviewed independently. Please reach out to the software team if you need help with this.
 
-### Who should I request a review from?
+### Whom should I request a review from?
 
 Everyone at Arcadia is encouraged to participate in code reviews, so you can request a review from anyone you think might be able to provide useful feedback. In general, it is a good practice to request reviews from people who can review different aspects of your PR. For example, someone on the software team might review code structure or implementation details, while a scientist on the discovery team might review conceptual approaches, analysis methods, or interpretation. If you'd like a reviewer to focus on something in particular, feel free to communicate this either in the PR description or reach out directly to them when you request a review.
 
