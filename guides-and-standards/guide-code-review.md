@@ -97,7 +97,7 @@ In general, focus on reviewing the areas or aspects of the PR that you feel you'
 Depending on the nature and scope of the repository, areas related to code quality may also be important to review. Generally, these areas are less important for analysis code or one-off scripts and more important for code that is likely to be used or developed over time and/or depended on by other users. These areas include:
 
 - **Clarity**: Is the code readable and easy to understand? Are variable names descriptive? Are comments used where necessary?
-- **Consistency**: Does the code follow the same style and conventions as the rest of the project?
+- **Consistency**: Does the code follow the same style and conventions as the rest of the project? Note: you should generally not need to comment on specific code style; checking for adherence to Arcadia's [style guidelines](https://training.arcadiascience.com/arcadia-users-group/20240206-intro-to-formatting-and-linting/lesson/#style-guides) should be automated by linters and type checkers.
 - **Performance**: Is the code efficient? Are there any bottlenecks or performance issues that could easily be improved?
 - **Testing**: Are there tests for critical parts of the code? Do the tests cover a reasonable set of possible cases? Are there sufficiently realistic test datasets?
 
