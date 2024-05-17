@@ -1,6 +1,6 @@
 # Selecting software dependencies for workflows and software
 
-We often expect that a computational analysis we write at Arcadia will either be used again by another Arcadian or automated for high throughput studies. When this is the case, the software quality used in those analyses becomes more important than if the analysis is a one-off task used to generate a specific biological insight.
+We often expect that a computational analysis we write at Arcadia will either be used again by another Arcadian or automated for high throughput studies. In these sorts of projects, we expect that the tools we use may one day be incorporated into a workflow or package. When this is the case, the software quality used in those analyses becomes more important than if the analysis is a one-off task used to generate a specific biological insight.
 
 ## Deciding when your task meets the re-use bar
 
