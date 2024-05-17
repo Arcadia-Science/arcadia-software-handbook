@@ -104,7 +104,7 @@ Depending on the nature and scope of the repository, areas related to code quali
 ### How should I provide feedback?
 
 Feedback should always take the form of comments made on the PR itself on GitHub. Comments should usually be on specific lines of code or blocks of code, rather than general comments about the PR as a whole. It can be helpful to provide "suggestions" (inline edits) directly, in case of small comments such as typo fixes or a clarification to a code comment; this lets the author accept the changes with a click. Rarely, it may be necessary to provide general feedback about the PR as a whole (for example, about a feature that may be missing or a naming convention that is used in many places), but this should be done sparingly.
-
+It is good practice to provide context and reasoning in PR comments, rather than just point out an issue with the code. Aside from helping the author understand the comment, this turns the PR into an educational opportunity to improve code practices at Arcadia. For example, instead of saying "this function should take a random seed as an arg", say "this function should take a random seed as an arg and pass it to the underlying calls, so that its output is deterministic across runs".
 ### How should I phrase my feedback?
 
 Feedback should always focus on the code itself and not on the author. Avoid using language that is accusatory, judgmental, or personal. Instead, use language that is objective, specific, and constructive.
