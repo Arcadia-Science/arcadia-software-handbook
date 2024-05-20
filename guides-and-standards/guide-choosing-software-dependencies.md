@@ -46,7 +46,7 @@ A dependency is any software tool that is required to make your tool work. For e
 ### Criteria that are nice to have (but not necessary if you’re willing to do the leg work to make sure the tool works)
 
 - **The tool has tests.** Tests ensure the accuracy and quality of a software tool. See [this AUG](https://training.arcadiascience.com/arcadia-users-group/20231104-testing-concepts/lesson/) for more about software tests.
-  - Hint: tests will often be a `test/` or `tests` folder, either in the root of the repository or
+  - Hint: tests will often be a `test/` or `tests` folder, either in the root of the repository or in the folder that contains the majority of the repo's code.
 - **The software is well-written.**
   - Hint: no `.DS_Store` files visible in any folder of the repository
   - Hint: the repository has a reasonable structure with clear and descriptive filenames
