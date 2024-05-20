@@ -85,6 +85,8 @@ Often, reviewers will request changes with their initial review. This means that
 
 In other cases, a reviewer may approve your PR during their initial review while also making comments or suggestions. This usually indicates that the reviewer felt their comments were sufficiently minor or inessential that you may address them at your discretion before merging.
 
+Once approved, it is a good practice to merge your PR as soon as you can. **As its author, it is your role and responsibility to merge your PR.** Reviewers should never merge PRs themselves, unless you have explicitly asked them to do so.
+
 ### What if I have an approving review but other reviewers haven't finished reviewing yet?
 
 In general, once your PR has one approving review, you may choose to merge your PR without waiting for additional reviews. This is, however, context-dependent. For example, you may want to wait longer for a review from someone who has domain expertise that is particularly relevant to your PR. Or, if your PR is large and complex, it is usually prudent to wait for at least two reviews before merging, rather than relying on just one reviewer to catch all potential issues.
@@ -121,6 +123,10 @@ You may sometimes be tagged to review a PR but feel that you don't have the expe
 
 Feedback should always take the form of comments made on the PR itself on GitHub. Comments should usually be on specific lines of code or blocks of code, rather than general comments about the PR as a whole. It can be helpful to provide "suggestions" (inline edits) directly, for small comments such as typo fixes or a clarification to a code comment; this lets the author accept the changes with a click. Sometimes, it may be necessary to provide general feedback about the PR as a whole (for example, about a feature that may be missing or a naming convention that is used in many places), but this should be done sparingly.
 
+**Never push commits to a PR yourself, even for simple fixes like typos.** This is considered discourteous and is likely to cause confusion and conflicts if the author has other changes in progress on their local PR branch. In the rare event that there is a change that you feel you are best positioned to make, explicitly ask the author for permission to push to their PR branch, and make sure to coordinate the timing of your commits with them to avoid conflicts.
+
+### How should I phrase my feedback?
+
 It is a good practice to provide context and reasoning in PR comments, rather than just pointing out problems with the code. Aside from helping the author understand your feedback, this turns the PR into an educational opportunity to improve code practices at Arcadia. For example, instead of saying "this function should take a random seed as an argument", say "this function should take a random seed as an argument and pass it to the underlying calls, so that its output is deterministic across runs."
 
 Remember that feedback should always focus on the code itself, not on the author. Avoid using language that is accusatory, judgmental, or personal. Instead, use language that is objective, specific, and constructive. For example, instead of saying "you should have split this code into multiple functions" or "this code should be split into multiple functions", say "I feel that this code would be clearer if it where split into multiple functions" and then include a suggestion about what you think those multiple functions could be.
@@ -142,6 +148,8 @@ For comments that you feel are worth making but that you wish to indicate are ei
 You'll likely notice at least a few important issues during your initial review that must be addressed before the PR can be merged (note that these could be "minor but major," like typos in variable names). In these cases, you should submit your initial review with a "changes requested" status. Once the author has adequately addressed your feedback, you'll need to re-review the PR and submit a second, approving review. Usually, this step is a formality and does not involve additional comments or changes.
 
 If, on the other hand, your initial review does not surface any critical issues, then it is acceptable to skip the re-review process and submit your initial review as an approval (sometimes called "approving with comments"). In this case, there is usually an implicit understanding that any comments in your review are minor enough that the author can address them at their descretion.
+
+**Never merge a PR yourself**. PRs should always be merged by the author of the PR unless the author specifies otherwise. This is both courteous and because merging a PR may trigger side effects that the author needs to manage or monitor (for example, PRs that include database migrations).
 
 ## [For authors] Additional tips
 
