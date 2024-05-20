@@ -156,3 +156,12 @@ If you need to work on code unrelated to the PR you are waiting to be reviewed, 
 To continue working on code that is added or modified by your open PR, you can create a new branch that _starts from your open PR branch_ (rather than the `main` branch). Once your initial PR is merged, you can then merge `main` into this new branch to update it, and later open a new, second PR from this branch to `main`. This PR will then contain only the changes that you made after your initial PR was opened.
 
 Note, however, that this approach can be painful if you merge PRs using the "squash and merge" method instead of the "merge commit" method because there will be no shared history between `main` and your second branch. This means that you can end up with a lot of merge conflicts when merging `main` into your second branch. If you run into this problem, please reach out the software team for assistance.
+
+## Further reading
+
+The resources below provide additional information about code review best practices and etiquette:
+
+- [GitHub Engineering's guide to writing and reviewing PRs](https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request/)
+- [Google's guide to code review](https://google.github.io/eng-practices/review/)
+- [Code review guide for code authors](https://mtlynch.io/code-review-love/)
+- [Why and how to do code reviews](https://www.codegram.com/blog/an-ode-to-code-reviews/)
