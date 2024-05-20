@@ -9,7 +9,7 @@ We often expect that a computational analysis we write at Arcadia will either be
 - nf-core-style Nextflow workflows like [NovelTree](https://github.com/Arcadia-Science/noveltree), [PreHGT](https://github.com/Arcadia-Science/prehgt), and [reads2genome](https://github.com/Arcadia-Science/reads2genome)
 - Snakemake workflows written as re-usable tools like [ProteinCartography](https://github.com/Arcadia-Science/ProteinCartography/)
 - Python packages like [plm-utils](https://github.com/Arcadia-Science/2024-plm-utils).
-- Tools designed to analyze experimental data in high throughput like [arcadia-phenotypeomat-protocol]([https://github.com/Arcadia-Science/arcadia-phenotypeomat-protocol)
+- Tools designed to analyze experimental data in high throughput like [arcadia-phenotypeomat-protocol](https://github.com/Arcadia-Science/arcadia-phenotypeomat-protocol)
 
 ## Things to look for when deciding to include a tool as a dependency
 
@@ -20,7 +20,7 @@ A dependency is any software tool that is required to make your tool work. For e
 - **The tool has a license and the license is permissible for commercial use.** Common licenses like BSD2, BSD3, GPL3, and MIT can all be used. Some other licenses can be used as well.
   - Hint: you can search for the word "commercial" in the license. This will often take you to text about whether the software can be used commercially. If it can’t, it will usually say something like "for non-commercial use only." If you're unsure, reach out to Katie.
 - **The tool can be run on the command line without human input.** A Graphical User Interface (GUI) (including web applications like Streamlit) is not required to run the tool. The tool isn’t encoded in notebooks.
-- **The tool can be run on a Linux platform.** This is a requirement\* for things dockerization and for running on AWS.
+- **The tool can be run on a Linux platform.** This is a requirement\* for things needing dockerization and for running on AWS.
   - *It's not actually a*requirement\* — the Mac operating systems can't really be dockerized, but Windows can. Similarly, there are Windows operating systems on AWS but these are sometimes annoying to use.
 
 ### Important criteria (think carefully before proceeding if the tool does not meet these criteria)
