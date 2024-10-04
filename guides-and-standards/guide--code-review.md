@@ -1,4 +1,4 @@
-# Code review etiquette and best practices
+# Code review guide
 
 ## Introduction
 

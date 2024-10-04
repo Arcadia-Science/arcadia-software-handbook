@@ -1,4 +1,4 @@
-# Feedback, contributions, and reuse
+# Guide for crediting external contributions
 
 We try to be as open as possible with our work and make all of our code both available and usable. We love receiving feedback at any level, through comments on our pubs or Twitter and issues or pull requests here on GitHub. In turn, we routinely provide public feedback on other people’s work by [commenting on preprints](https://sciety.org/lists/f8459240-f79c-4bb2-bb55-b43eae25e4f6), filing issues on repositories when we encounter bugs, and contributing to open-source projects through pull requests and code review.
 

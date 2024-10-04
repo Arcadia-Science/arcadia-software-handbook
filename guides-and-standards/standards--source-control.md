@@ -1,4 +1,4 @@
-# Source control
+# Standards for source control
 
 This standard describes core software engineering standards related to version control and data management at Arcadia Science.
 
