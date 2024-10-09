@@ -21,10 +21,16 @@ We have Arcadia-specific templates for [Python](https://github.com/Arcadia-Scien
   - For Python projects, a Python-specific package manager can also be used (we prefer [Poetry](https://python-poetry.org)). In these cases, dependencies may be listed in a `requirements.txt` file or in `pyproject.toml` instead of in a Conda environment file.
   - Caveat: when developing libraries or packages, it may be more appropriate to specify a minimum version, rather than an exact version, for some dependencies, so that users of the package can install the latest versions of its dependencies. Please check with the software team if you are unsure about this.
 - **No large files**: The repository should not include files larger than 100MB, even if they are necessary for the code to run. If you need to include large files, they should be hosted on Zenodo or an appropriate domain-specific archive (e.g., the SRA). In rare cases where neither of these options are possible or appropriate, a custom public S3 bucket can be used. In all cases, a link to the files should be included in the README.
-- **No sensitive information**: The repository should not include any sensitive or private information like API keys or access credentials. If the code requires sensitive information to run, it should be stored in a separate configuration file that is not included in the repository. If you accidentally added sensitive information to your repository, please reach out to the software team for help. **It is not sufficient to delete the sensitive information in a subsequent commit**, as the information will still exist in the commit history.
+- **No sensitive information**: The repository should not include any sensitive or private information like API keys or access credentials. See [the section below](#about-sensitive-information) for more information on this.
 - **License**: The repository should use the MIT license, if possible. Please refer to [this notion page](https://www.notion.so/arcadiascience/Coding-at-Arcadia-Software-Licensing-Policy-9054a0b178d74a42a7a4ad41de46a671?pvs=4) for more information.
   - Caveat: the MIT license is compatible with most, but not all, other open-source software licenses. If your project uses software with an incompatible license, you will need to use a different license. Please check with both the legal team and the software team if you are unsure about this.
 - **Repository settings**: To protect the repository from unintended changes, branch protection rules should be configured for the `main` branch. Please refer to the [this notion page](https://www.notion.so/arcadiascience/How-to-manage-paired-public-and-private-GitHub-repos-2c3e96d6097943a099c3cdc0ab8789df) for details.
+
+## About sensitive information
+
+When a repository is made public, its entire commit history and all of its PRs - whether they were merged or not - are also made public. **This means that any sensitive information that was included in the repository at any point in time, even in PRs that were never merged, will be publicly accessible.**
+
+If the code in a repository requires sensitive information to run, it should be stored in a separate configuration file that is not included in the repository. If you accidentally added sensitive information to your repository, please reach out to the software team for help. **It is not sufficient to delete the sensitive information by overwriting it in a subsequent commit**, as the information will still exist in the commit history and/or closed PRs.
 
 ## Standards for code quality
 
