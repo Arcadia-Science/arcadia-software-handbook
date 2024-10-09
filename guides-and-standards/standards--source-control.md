@@ -2,23 +2,26 @@
 
 This document describes the software engineering standards related to version control at Arcadia Science.
 
+For a TLDR overview, see the [core standards](#core-standards) section below.
+
 ## Table of contents
 
 - [Standards for source control](#standards-for-source-control)
   - [Table of contents](#table-of-contents)
   - [About Git and GitHub](#about-git-and-github)
   - [Core standards](#core-standards)
-    - [Repositories](#repositories)
+  - [Repositories](#repositories)
     - [Public repositories](#public-repositories)
     - [Repository templates](#repository-templates)
-    - [Working on branches](#working-on-branches)
     - [Default repository settings](#default-repository-settings)
+    - [\[Optional\] Code owners](#optional-code-owners)
+  - [Branches and pull requests](#branches-and-pull-requests)
+    - [Working on branches](#working-on-branches)
     - [Pull Requests (PRs) and code reviews](#pull-requests-prs-and-code-reviews)
     - [What not to keep under version control](#what-not-to-keep-under-version-control)
-    - [Data management](#data-management)
     - [Review templates](#review-templates)
-    - [\[Optional\] Code owners](#optional-code-owners)
     - [\[Optional\] Reviewing Jupyter notebooks using the ReviewNB tool](#optional-reviewing-jupyter-notebooks-using-the-reviewnb-tool)
+  - [Data management](#data-management)
   - [Guidelines for collaborating on codebases with collaborators who are not Arcadians](#guidelines-for-collaborating-on-codebases-with-collaborators-who-are-not-arcadians)
   - [Common pitfalls and tricks to overcome them](#common-pitfalls-and-tricks-to-overcome-them)
   - [Tutorials](#tutorials)
@@ -39,9 +42,9 @@ Version control is the practice of tracking and managing changes to software cod
 - All Pull Requests should be reviewed by at least one other Arcadian and merged by the author of the pull request upon approval.
 - Code associated with a pub is tagged in a release and archived on [Zenodo](https://zenodo.org/).
 
-### Repositories
+## Repositories
 
-At Arcadia Science, repositories should follow basic guidelines.
+At Arcadia Science, all GitHub repositories should follow basic guidelines.
 
 - **Repository location**: Repositories for code written at Arcadia should be under the [Arcadia-Science GitHub organization](https://github.com/Arcadia-Science) and not under personal accounts.
 - **Private by default**: Repositories should be private by default. If you need to make a repository public, please consult with the software team.
@@ -59,6 +62,18 @@ Additional standards apply to public repositories to ensure that the code we rel
 
 We have Arcadia-specific templates for [Python](https://github.com/Arcadia-Science/python-analysis-template), [R](https://github.com/Arcadia-Science/r-analysis-template), [Snakemake](https://github.com/Arcadia-Science/snakemake-template), and [Nextflow](https://github.com/Arcadia-Science/nextflow-template-repository) repositories. It is strongly recommended to start new projects using these templates, as this will mean that your repository will automatically satisfy most of the requirements listed above.
 
+### Default repository settings
+
+Each repository should have the following settings. Please check this set of boxes when you create a new repo:
+
+<img width="768" alt="Default repository settings" src="https://user-images.githubusercontent.com/2692053/189210914-32052663-e2d3-4ab6-a418-1d1aca6a9afd.png">
+
+### [Optional] Code owners
+
+For projects with a lot of coordination between team members, it may make sense to define individuals or teams that are responsible for sections of code in a repository. This may make it easier to seek the appropriate code review before merging a pull request. You can accomplish this by using the [Code Owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) feature of Github by creating a `CODEOWNERS` file under the `.github` directory of your project. An example codeowners template file can be found [here](../.github/CODEOWNERS).
+
+## Branches and pull requests
+
 ### Working on branches
 
 - We work on repositories using branches and not forks.
@@ -70,12 +85,6 @@ We have Arcadia-specific templates for [Python](https://github.com/Arcadia-Scien
 - Tag potential reviewers for your pull request.
 - Once at least one Arcadian has approved your pull request, you may merge your pull request.
 - Once your pull request is merged, please delete your branch to keep the Github branches/tags clean and tidy.
-
-### Default repository settings
-
-Each repository should have the following settings. Please check this set of boxes when you create a new repo:
-
-<img width="768" alt="Default repository settings" src="https://user-images.githubusercontent.com/2692053/189210914-32052663-e2d3-4ab6-a418-1d1aca6a9afd.png">
 
 ### Pull Requests (PRs) and code reviews
 
@@ -99,25 +108,21 @@ Each repository should have the following settings. Please check this set of box
 
 If the code in a repository requires sensitive information to run, it should be stored in a separate configuration file that is explicitly not included in the repository by adding its name to the `.gitignore` file.
 
-### Data management
+### Review templates
+
+It's a best practice to provide a default template for the developer to fill out when creating the pull request. This can be done by creating a file called `PULL_REQUEST_TEMPLATE.md` under the `.github` directory of your project. An example pull request template file can be found [here](../.github/PULL_REQUEST_TEMPLATE.md).
+
+### [Optional] Reviewing Jupyter notebooks using the ReviewNB tool
+
+Jupyter notebooks are great data science tools as they combine code, output, and written notes into a single document. They support code written in Python, R, and Julia, and can be coaxed to execute bash as well. Given that they are natively rendered by GitHub, they are a good option to record computational experiments. However, in a pull request, notebooks quickly become unwieldy because they include not only the code you wrote and ran but also code that specifies the format of the document. This makes wading through a diff painful. We have enabled the [ReviewNB tool](https://www.reviewnb.com/) to produce better diffs from Jupyter notebooks.
+
+## Data management
 
 - For publicly available data, scripts used to download and process these data should be preserved, as should the versions of items used in processing (e.g. probe to gene mappings). This code should be version controlled. Where possible, intermediate files of reasonable size can be stored to facilitate re-use, but the process to regenerate these files from publicly available data should be preserved.
 - Files under 100MB in size can be stored in the repository.
 - Private files over 100MB should be stored in a cloud storage service (e.g. an S3 bucket or Google Drive) and instructions to access the files should be included in the README.
 - Public files should be stored in a public archive (e.g. the Sequence Read Archive), in a Zenodo repository, or in a publicly-accessible S3 bucket. Reach out to the software team for help with this.
 - When we generate data, they should be stored in a location where they are replicated and uploaded to the relevant database as soon as possible (e.g. raw sequencing data uploaded to the Sequence Read Archive). If possible, the code should be updated to match the above. For more on this, please see the relevant publishing documentation [here](https://www.notion.so/arcadiascience/Sharing-Data-eca60da150f04a7a905a8540871f0364).
-
-### Review templates
-
-It's a best practice to provide a default template for the developer to fill out when creating the pull request. This can be done by creating a file called `PULL_REQUEST_TEMPLATE.md` under the `.github` directory of your project. An example pull request template file can be found [here](../.github/PULL_REQUEST_TEMPLATE.md).
-
-### [Optional] Code owners
-
-For projects with a lot of coordination between team members, it may make sense to define individuals or teams that are responsible for sections of code in a repository. This may make it easier to seek the appropriate code review before merging a pull request. You can accomplish this by using the [Code Owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) feature of Github by creating a `CODEOWNERS` file under the `.github` directory of your project. An example codeowners template file can be found [here](../.github/CODEOWNERS).
-
-### [Optional] Reviewing Jupyter notebooks using the ReviewNB tool
-
-Jupyter notebooks are great data science tools as they combine code, output, and written notes into a single document. They support code written in Python, R, and Julia, and can be coaxed to execute bash as well. Given that they are natively rendered by GitHub, they are a good option to record computational experiments. However, in a pull request, notebooks quickly become unwieldy because they include not only the code you wrote and ran but also code that specifies the format of the document. This makes wading through a diff painful. We have enabled the [ReviewNB tool](https://www.reviewnb.com/) to produce better diffs from Jupyter notebooks.
 
 ## Guidelines for collaborating on codebases with collaborators who are not Arcadians
 
