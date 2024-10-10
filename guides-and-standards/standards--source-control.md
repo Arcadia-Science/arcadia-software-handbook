@@ -31,7 +31,7 @@ For a TLDR overview, see the [core standards](#core-standards) section below.
 
 Version control is the practice of tracking and managing changes to software code. This means we can easily see who made what change when and potentially revert to earlier version of the code. It is an essential collaboration tool for large teams to build complex software. [Git](https://git-scm.com/) is a free and open source distributed version control system. Since version control tools like Git work across platforms, it also makes access to code repositories easy and consistent across environments.
 
-[GitHub](https://github.com/) is built on top of Git and is our primary version control service. We have an [Arcadia Science account](https://github.com/Arcadia-Science) and we expect that team members will maintain their code in repositories under this team account.
+[GitHub](https://github.com/) is built on top of Git and is our primary version control service. We have an [Arcadia Science GitHub organization](https://github.com/Arcadia-Science) and we expect that team members will maintain their code in repositories under this organization. If you haven't already done so, please reach out to the software team to have your GitHub account added to the Arcadia Science organization. It's fine to use your existing personal GitHub account for this, as long as your work is done in repositories under the Arcadia Science organization.
 
 ## Core standards
 
@@ -60,7 +60,7 @@ Additional standards apply to public repositories to ensure that the code we rel
 
 ### Repository templates
 
-We have Arcadia-specific templates for [Python](https://github.com/Arcadia-Science/python-analysis-template), [R](https://github.com/Arcadia-Science/r-analysis-template), [Snakemake](https://github.com/Arcadia-Science/snakemake-template), and [Nextflow](https://github.com/Arcadia-Science/nextflow-template-repository) repositories. It is strongly recommended to start new projects using these templates, as this will mean that your repository will automatically satisfy most of the requirements listed above.
+We have Arcadia-specific templates for [Python analysis projects](https://github.com/Arcadia-Science/python-analysis-template), [Python packages](https://github.com/Arcadia-Science/python-package-template), [R analysis projects](https://github.com/Arcadia-Science/r-analysis-template), [Snakemake pipelines](https://github.com/Arcadia-Science/snakemake-template), and [Nextflow pipelines](https://github.com/Arcadia-Science/nextflow-template-repository). It is strongly recommended to start new projects using these templates, as this will mean that your repository will automatically satisfy most of the requirements listed above.
 
 ### Default repository settings
 
@@ -76,7 +76,8 @@ For projects with a lot of coordination between team members, it may make sense 
 
 ### Working on branches
 
-- We work on repositories using branches and not forks.
+- We work on our repositories using branches and not forks.
+- In rare cases, we may need to fork external repositories. Please consult with the software team if you need to fork an external repository.
 - The default branch name is `main`.
 - For each code change, feature, or bugfix, create a new branch. Branch names should be all lowercase and should follow this naming convention: `<your initials>/<brief-description-of-changes>`. Example: `fmc/add-source-control-standards`.
 - Make your change and push it to the branch.
@@ -127,13 +128,13 @@ Jupyter notebooks are great data science tools as they combine code, output, and
 ## Guidelines for collaborating on codebases with collaborators who are not Arcadians
 
 - Before beginning a collaboration, please consult with your manager and our legal counsel to make sure there are not licensing and legal problems with your collaboration.
-- If you’re working on an Arcadia Science repository with outside collaborators, the repository is most likely already public. If so, that’s great! If the repository is private, you can include the Github account to the repository as an “outside collaborator”.
+- If you’re working on an Arcadia Science repository with outside collaborators, the repository is most likely already public. If so, that’s great! If the repository is private, you can allow your collaborators to access the repository by adding them as “outside collaborators” on GitHub. Please reach out to the software team for help with this.
 - Either way, the rules in this document as it pertains to code review and working in branches apply to outside collaborators as well.
 - If you plan to actively work on a repository with outside collaborators, it’s recommended to add `CONTRIBUTING.MD` and `CODE_OF_CONDUCT.md` files to the root of the repository to set expectations ahead of time. Default templates for these will be available soon.
 
 ## Common pitfalls and tricks to overcome them
 
-Git is notoriously difficult to use. It’s easy to get stuck in a quagmire of git branches and have no idea how to work your way out. If this happens to you, we’ve all been there, don’t panic! ChatGPT and/or Google are a good first option to see if you can identify a solution. If not, post in the #software-questions Slack channel to get help from fellow Arcadian. See below for some common pitfalls and some strategies to avoid or overcome them.
+Git is notoriously difficult to use. It’s easy to get stuck in a quagmire of git branches and have no idea how to work your way out. If this happens to you, we’ve all been there, don’t panic! ChatGPT and/or Google are a good first option to see if you can identify a solution. If not, post in the #software-questions Slack channel to get help from a fellow Arcadian. See below for some common pitfalls and some strategies to avoid or overcome them.
 
 - **Adding too many files or the wrong files into a commit.** Git has two strategies to help you avoid adding the wrong files into your repository. First, there is the `.gitignore` file in which you can specify file names or paths (including with regex!) that should always be ignored by Git. It might make sense to add things like `*.fastq.gz` to this file to avoid adding large sequencing files to GitHub. Second, instead of doing something like `git add` , it’s generally good practice to type out the names of the files you want to add explicitly (`git add 01-analyze-seq-data.ipynb`) so you don’t accidentally add something unintended. If you do add something you didn’t mean to, you can always remove it later!
 - **Starting from the wrong branch.** A branch can start from the `main` branch of a GitHub repo, or any other branch that already exists. Before you start a new branch, check that you’re on the branch you want to start from with `git branch`. If you’re not, use `git checkout <branch name>` to get to the branch you want to start with before creating a new one. It is helpful to customize your terminal of choice to always show the current branch name. See instructions [here](https://askubuntu.com/questions/730754/how-do-i-show-the-git-branch-with-colours-in-bash-prompt).
@@ -141,7 +142,12 @@ Git is notoriously difficult to use. It’s easy to get stuck in a quagmire of g
 
 ## Tutorials
 
-There are approximately billions of Git and GitHub tutorials online. Here are some that I found interesting:
+We have some internal resources on Git and GitHub that you can use to get started:
+
+- Our [AUG lesson on Git and GitHub](https://training.arcadiascience.com/workshops/20220920-intro-to-git-and-github/lesson/).
+- Our [GitHub onboarding tutorial](https://github.com/Arcadia-Science/arcadia-github-onboarding).
+
+There are approximately billions of Git and GitHub tutorials online. Here are some that we like:
 
 - Very quick, bare bones of Git in 2 minutes: [https://www.garyrobinson.net/2014/10/git-in-two-minutes-for-a-solo-developer.html](https://www.garyrobinson.net/2014/10/git-in-two-minutes-for-a-solo-developer.html)
 - This set of hour long tutorials by Github: [https://skills.github.com/](https://skills.github.com/)
