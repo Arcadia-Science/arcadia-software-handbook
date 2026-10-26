@@ -48,7 +48,7 @@ At Arcadia Science, all GitHub repositories should follow basic guidelines.
 
 - **Repository location**: Repositories for code written at Arcadia should be under the [Arcadia-Science GitHub organization](https://github.com/Arcadia-Science) and not under personal accounts.
 - **Private by default**: Repositories should be private by default. If you need to make a repository public, please consult with the software team.
-- **Repository names:** Repository names are lower case and hyphenated. (e.g. `arcadia-software-handbook`). The names of analysis repositories should be prefixed with the year of the project (e.g. `2024-worm-tracking`).
+- **Repository names:** Repository names are lower case and hyphenated. (e.g. `arcadia-software-handbook`). A year prefix (e.g., `2026-`) is not required, and any repository that accompanies a pub should not contain a year prefix.
 - **README**: Repositories should contain a descriptive README document.
 - **License**: Each repository should have a license file. The default license for Arcadia Science repositories is [the MIT license](https://github.com/Arcadia-Science/python-analysis-template/blob/main/LICENSE).
 - **Archiving repositories:** If a repository is no longer useful, make it read-only by archiving it. Follow the instructions [here](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories).
