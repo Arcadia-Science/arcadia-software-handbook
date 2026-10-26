@@ -1,6 +1,6 @@
 # Guide for crediting external contributions
 
-We try to be as open as possible with our work and make all of our code both available and usable. We love receiving feedback at any level, either through comments on our pubs, on social media, or on issues or pull requests here on GitHub. In turn, we routinely provide public feedback on other people’s work by [commenting on preprints](https://hypothes.is/groups/ApM1XL6A/arcadia-science), filing issues on repositories when we encounter bugs, and contributing to open-source projects through pull requests and code reviews.
+We try to be as open as possible with our work and make all of our code both available and usable. We love receiving feedback at any level, either through comments on our pubs, on social media, or on issues or pull requests here on GitHub. In turn, we routinely provide public feedback on other people’s work by commenting on preprints, filing issues on repositories when we encounter bugs, and contributing to open-source projects through pull requests and code reviews.
 
 Anyone is welcome to contribute to our code. If someone’s contribution has a substantial impact on our scientific direction, the biological result of a project, or the functionality of our code, the pub’s point person may add that person as a formal contributor to the pub, specifying the nature of their contribution(s) according to our modified version of [CRediT taxonomy](https://credit.niso.org/).
 
